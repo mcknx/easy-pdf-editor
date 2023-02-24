@@ -2,6 +2,9 @@
   "name": "easy-email",
   "scripts": {
     "install-all": "lerna exec -- yarn --force && cd demo && yarn --force",
+    "rm-all": "rmdir /s /q node_modules && del yarn.lock && cd demo && rmdir /s /q node_modules && del yarn.lock && cd .. && npm run rm-packages",
+    "rm-packages": "cd packages && cd easy-email-core && rmdir /s /q node_modules && del yarn.lock && cd .. && cd easy-email-editor && rmdir /s /q node_modules && del yarn.lock && cd .. && cd easy-email-extensions && rmdir /s /q node_modules && del yarn.lock && cd .. && cd easy-email-localization && rmdir /s /q node_modules && del yarn.lock && cd .. && cd easy-pdf-core && rmdir /s /q node_modules && del yarn.lock",
+    "rm-yarns": "cd packages && cd easy-email-core && del yarn.lock && cd .. && cd easy-email-editor && del yarn.lock && cd .. && cd easy-email-extensions && del yarn.lock && cd .. && cd easy-email-localization && del yarn.lock && cd .. && cd easy-pdf-core && del yarn.lock",
     "vercel-install": "lerna exec -- yarn install --network-concurrency 1 && cd demo && yarn install --network-concurrency 1",
     "build": "yarn build:core && yarn build:editor && yarn build:extensions",
     "build:core": "cd packages/easy-email-core && yarn build",
