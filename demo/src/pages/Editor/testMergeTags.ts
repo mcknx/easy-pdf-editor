@@ -7,8 +7,14 @@ export const testMergeTags = {
     email: 'easy-email@gmail.com',
     project: 'Easy email',
   },
+  reference: {
+    no: 'SSL2302001',
+  },
+  shed: {
+    logo: 'http://res.cloudinary.com/dwkp0e1yo/image/upload/v1677036974/lkvpnsg9lgi3uvzryjz6.png',
+  },
   date: {
-    today: new Date().toDateString(),
+    today: 'Wed Feb 22 2023',
   },
   emptyList: [],
   product_list: [
