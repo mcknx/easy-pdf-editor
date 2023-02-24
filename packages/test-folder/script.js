@@ -1,4 +1,4 @@
-const test = require('easy-pdf-core');
+const test = require('easy-pdf-localization');
 
 console.log(test('mckn'));
 console.log(test('adadasd'));

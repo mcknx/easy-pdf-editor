@@ -1,0 +1,17 @@
+{
+  "name": "easy-pdf-localization",
+  "license": "MIT",
+  "description": "pdf editor",
+  "version": "4.7.0",
+  "author": "mcknx",
+  "keywords": [],
+  "files": [
+    "locales"
+  ],
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4"
+  }
+}
