@@ -16,19 +16,13 @@ export default defineConfig({
     target: 'es2015',
     lib: {
       entry: path.resolve(__dirname, 'src/index.tsx'),
-      name: 'easy-email-core',
+      name: 'easy-pdf-core',
       formats: ['es', 'cjs'],
-      fileName: (mod) => `index.${mod}.js`,
+      fileName: mod => `index.${mod}.js`,
     },
     rollupOptions: {
       plugins: [],
-      external: [
-        'react',
-        'react-dom',
-        'react-dom/server',
-        'mjml-browser',
-        'lodash',
-      ],
+      external: ['react', 'react-dom', 'react-dom/server', 'mjml-browser', 'lodash'],
       output: {},
     },
     outDir: 'lib',

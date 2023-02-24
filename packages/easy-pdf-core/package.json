@@ -20,7 +20,7 @@
   "files": [
     "lib"
   ],
-  "main": "index.js",
+  "main": "lib/index.cjs.js",
   "module": "lib/index.es.js",
   "types": "lib/index.d.ts",
   "scripts": {

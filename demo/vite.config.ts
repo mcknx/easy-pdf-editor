@@ -21,6 +21,7 @@ export default defineConfig({
       '@arco-themes': path.resolve('./node_modules/@arco-themes'),
       '@': path.resolve('../packages/easy-email-editor/src'),
       'easy-email-core': path.resolve('../packages/easy-email-core/src/index.tsx'),
+      'easy-pdf-core': path.resolve('../packages/easy-pdf-core/src/index.tsx'),
       'easy-email-editor/lib/locales.json': path.resolve(
         '../packages/easy-email-editor/public/locales.json',
       ),

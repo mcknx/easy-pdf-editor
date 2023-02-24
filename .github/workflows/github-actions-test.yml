@@ -22,6 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: cd packages/easy-email-core && yarn
+        run: cd packages/easy-pdf-core && yarn
 
       - name: Run tests
         run: yarn test
