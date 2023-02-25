@@ -1,5 +1,5 @@
 import { Stack } from '@demo/components/Stack';
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 import {
   AttributesPanelWrapper,
   ColorPickerField,

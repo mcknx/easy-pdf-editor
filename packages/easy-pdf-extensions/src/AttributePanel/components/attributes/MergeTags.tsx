@@ -1,26 +1,22 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { Tree, TreeSelect } from '@arco-design/web-react';
 import { get, isObject } from 'lodash';
-import { useBlock, useEditorProps, useFocusIdx } from 'easy-email-editor';
+import { useBlock, useEditorProps, useFocusIdx } from 'easy-pdf-editor';
 import { getContextMergeTags } from '@extensions/utils/getContextMergeTags';
 
 export const MergeTags: React.FC<{
   onChange: (v: string) => void;
   value: string;
   isSelect?: boolean;
-}> = React.memo((props) => {
+}> = React.memo(props => {
   const [expandedKeys, setExpandedKeys] = useState<string[]>([]);
   const { focusIdx } = useFocusIdx();
-  const {
-    mergeTags = {},
-    mergeTagGenerate,
-    renderMergeTagContent,
-  } = useEditorProps();
+  const { mergeTags = {}, mergeTagGenerate, renderMergeTagContent } = useEditorProps();
   const { values } = useBlock();
 
   const contextMergeTags = useMemo(
     () => getContextMergeTags(mergeTags, values, focusIdx),
-    [mergeTags, values, focusIdx]
+    [mergeTags, values, focusIdx],
   );
 
   const treeOptions = useMemo(() => {
@@ -34,7 +30,7 @@ export const MergeTags: React.FC<{
       key: string,
       title: string,
       parent: { [key: string]: any; children?: any[] },
-      mapData: Array<any> = []
+      mapData: Array<any> = [],
     ) => {
       const currentMapData = {
         key: key,
@@ -46,15 +42,13 @@ export const MergeTags: React.FC<{
       mapData.push(currentMapData);
       const current = parent[title];
       if (current && typeof current === 'object') {
-        Object.keys(current).map((childKey) =>
-          deep(key + '.' + childKey, childKey, current, currentMapData.children)
+        Object.keys(current).map(childKey =>
+          deep(key + '.' + childKey, childKey, current, currentMapData.children),
         );
       }
     };
 
-    Object.keys(contextMergeTags).map((key) =>
-      deep(key, key, contextMergeTags, treeData)
-    );
+    Object.keys(contextMergeTags).map(key => deep(key, key, contextMergeTags, treeData));
     return treeData;
   }, [contextMergeTags]);
 
@@ -62,9 +56,9 @@ export const MergeTags: React.FC<{
     (key: string) => {
       const value = get(contextMergeTags, key);
       if (isObject(value)) {
-        setExpandedKeys((keys) => {
+        setExpandedKeys(keys => {
           if (keys.includes(key)) {
-            return keys.filter((k) => k !== key);
+            return keys.filter(k => k !== key);
           } else {
             return [...keys, key];
           }
@@ -73,7 +67,7 @@ export const MergeTags: React.FC<{
       }
       return props.onChange(mergeTagGenerate(key));
     },
-    [contextMergeTags, props, mergeTagGenerate]
+    [contextMergeTags, props, mergeTagGenerate],
   );
 
   const mergeTagContent = useMemo(
@@ -87,7 +81,7 @@ export const MergeTags: React.FC<{
       ) : (
         <></>
       ),
-    [renderMergeTagContent, props.onChange, props.isSelect, props.value]
+    [renderMergeTagContent, props.onChange, props.isSelect, props.value],
   );
 
   if (renderMergeTagContent) {
@@ -103,7 +97,7 @@ export const MergeTags: React.FC<{
           dropdownMenuStyle={{ maxHeight: 400, overflow: 'auto' }}
           placeholder={t('Please select')}
           treeData={treeOptions}
-          onChange={(val) => onSelect(val)}
+          onChange={val => onSelect(val)}
         />
       ) : (
         <Tree

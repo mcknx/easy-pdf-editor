@@ -14,7 +14,7 @@ import { LetterSpacing } from '@extensions/AttributePanel/components/attributes/
 
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Collapse, Grid, Space, Tooltip, Button } from '@arco-design/web-react';
-import { IconFont } from 'easy-email-editor';
+import { IconFont } from 'easy-pdf-editor';
 import { HtmlEditor } from '../../UI/HtmlEditor';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';
@@ -24,14 +24,14 @@ export function Text() {
 
   return (
     <AttributesPanelWrapper
-      extra={(
+      extra={
         <Tooltip content={t('Html mode')}>
           <Button
             onClick={() => setVisible(true)}
             icon={<IconFont iconName='icon-html' />}
           />
         </Tooltip>
-      )}
+      }
     >
       <CollapseWrapper defaultActiveKey={['0', '1', '2']}>
         <Collapse.Item

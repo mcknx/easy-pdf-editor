@@ -19,11 +19,11 @@ $ yarn add easy-pdf-extensions
 ```js
 import React from 'react';
 import { BlockManager, BasicType, AdvancedType } from 'easy-pdf-core';
-import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
+import { EmailEditor, EmailEditorProvider } from 'easy-pdf-editor';
 import { ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { useWindowSize } from 'react-use';
 
-import 'easy-email-editor/lib/style.css';
+import 'easy-pdf-editor/lib/style.css';
 import 'easy-pdf-extensions/lib/style.css';
 
 const categories: ExtensionProps['categories'] = [

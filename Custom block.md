@@ -86,7 +86,7 @@ You can construct your custom block through basic blocks. For example,
 a custom button, only the background color and text can be modified
 
 ```tsx
-import { Button } from 'easy-email-editor';
+import { Button } from 'easy-pdf-editor';
 
 const render = (data: ICustomButton, idx: string, context: IPage): IBlockData => {
   const attributes = data.attributes;
@@ -145,7 +145,7 @@ const render = (
 Only after registering this block, mjml-parser can convert it into basic blocks
 
 ```ts
-import { BlocksMap } from 'easy-email-editor';
+import { BlocksMap } from 'easy-pdf-editor';
 
 BlocksMap.registerBlocks({ 'block-name': YourCustomBlock });
 ```

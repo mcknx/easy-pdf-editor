@@ -1,12 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import { useCallback, useContext } from 'react';
 import { SelectionRangeContext } from '@extensions/AttributePanel/components/provider/SelectionRangeProvider';
-import { getShadowRoot } from 'easy-email-editor';
+import { getShadowRoot } from 'easy-pdf-editor';
 
 export function useSelectionRange() {
-  const { selectionRange, setSelectionRange } = useContext(
-    SelectionRangeContext
-  );
+  const { selectionRange, setSelectionRange } = useContext(SelectionRangeContext);
 
   const restoreRange = useCallback((range: Range) => {
     const selection = (getShadowRoot() as any).getSelection();
@@ -27,9 +25,8 @@ export function useSelectionRange() {
       newRange.selectNode(element);
       setSelectionRange(newRange);
       selection.addRange(newRange);
-
     },
-    [setSelectionRange]
+    [setSelectionRange],
   );
 
   return {

@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Collapse, Space } from '@arco-design/web-react';
-import { useBlock, useEditorProps } from 'easy-email-editor';
+import { useBlock, useEditorProps } from 'easy-pdf-editor';
 import { isAdvancedBlock } from 'easy-pdf-core';
 import { Iteration } from '../Iteration';
 import { Condition } from '../Condition';

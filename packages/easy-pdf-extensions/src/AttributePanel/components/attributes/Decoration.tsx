@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { NumberField, TextField } from '../../../components/Form';
-import { useFocusIdx, Stack, TextStyle } from 'easy-email-editor';
+import { useFocusIdx, Stack, TextStyle } from 'easy-pdf-editor';
 
 export function Decoration() {
   const { focusIdx } = useFocusIdx();

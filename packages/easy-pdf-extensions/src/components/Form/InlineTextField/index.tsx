@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import { ContentEditableType, DATA_CONTENT_EDITABLE_TYPE, getShadowRoot } from 'easy-email-editor';
+import {
+  ContentEditableType,
+  DATA_CONTENT_EDITABLE_TYPE,
+  getShadowRoot,
+} from 'easy-pdf-editor';
 import { useField, useForm } from 'react-final-form';
 
 export interface InlineTextProps {
@@ -19,7 +23,8 @@ export function InlineText({ idx, onChange, children }: InlineTextProps) {
     const shadowRoot = getShadowRoot();
 
     const onPaste = (e: ClipboardEvent) => {
-      if (!(e.target instanceof Element) || !e.target.getAttribute('contenteditable')) return;
+      if (!(e.target instanceof Element) || !e.target.getAttribute('contenteditable'))
+        return;
       e.preventDefault();
 
       const text = e.clipboardData?.getData('text/plain') || '';
@@ -34,7 +39,6 @@ export function InlineText({ idx, onChange, children }: InlineTextProps) {
 
     const onInput = (e: Event) => {
       if (e.target instanceof Element && e.target.getAttribute('contenteditable')) {
-
         const contentEditableType = e.target.getAttribute(DATA_CONTENT_EDITABLE_TYPE);
         if (contentEditableType === ContentEditableType.RichText) {
           onChange(e.target.innerHTML || '');

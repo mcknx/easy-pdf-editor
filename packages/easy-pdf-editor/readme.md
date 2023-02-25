@@ -1,4 +1,4 @@
-# Easy-email-editor
+# easy-pdf-editor
 
 ## Introduction
 
@@ -7,20 +7,20 @@ Email render and preview container.
 ## usage
 
 ```sh
-$ npm install --save easy-email-editor
+$ npm install --save easy-pdf-editor
 ```
 
 or
 
 ```sh
-$ yarn add easy-email-editor
+$ yarn add easy-pdf-editor
 ```
 
 ```js
 import React from 'react';
 import { BlockManager } from 'easy-pdf-core';
-import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
-import 'easy-email-editor/lib/style.css';
+import { EmailEditor, EmailEditorProvider } from 'easy-pdf-editor';
+import 'easy-pdf-editor/lib/style.css';
 
 const initialValues = {
   subject: 'Welcome to Easy-email',

@@ -1,10 +1,13 @@
 import { merge } from 'lodash';
 import React from 'react';
-import { Stack } from 'easy-email-editor';
-import { Checkbox, CheckboxGroupProps as ArcoCheckboxGroupProps } from '@arco-design/web-react';
+import { Stack } from 'easy-pdf-editor';
+import {
+  Checkbox,
+  CheckboxGroupProps as ArcoCheckboxGroupProps,
+} from '@arco-design/web-react';
 
 export interface CheckboxGroupProps extends ArcoCheckboxGroupProps<any> {
-  options: Array<{ value: string; label: React.ReactNode; }>;
+  options: Array<{ value: string; label: React.ReactNode }>;
   onChange?: (e: any[]) => void;
   value?: ArcoCheckboxGroupProps<any>['value'];
   style?: Partial<React.CSSProperties>;
@@ -20,9 +23,16 @@ export function CheckBoxGroup(props: CheckboxGroupProps) {
       value={rest.value}
       onChange={rest.onChange}
     >
-      <Stack vertical={vertical} spacing='extraTight'>
+      <Stack
+        vertical={vertical}
+        spacing='extraTight'
+      >
         {rest.options.map((item, index) => (
-          <Checkbox style={rest.checkboxStyle} key={index} value={item.value}>
+          <Checkbox
+            style={rest.checkboxStyle}
+            key={index}
+            value={item.value}
+          >
             {item.label}
           </Checkbox>
         ))}

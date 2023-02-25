@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 import { AutoCompleteField } from '../../../components/Form';
 import { useFontFamily } from '@extensions/hooks/useFontFamily';
 

@@ -1,4 +1,4 @@
-import { IconFont, BlockAvatarWrapper } from 'easy-email-editor';
+import { IconFont, BlockAvatarWrapper } from 'easy-pdf-editor';
 import React, { useCallback, useEffect, useRef } from 'react';
 import { BlockType } from 'easy-pdf-core';
 import styles from './index.module.scss';

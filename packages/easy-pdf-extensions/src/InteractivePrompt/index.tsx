@@ -1,4 +1,4 @@
-import { ActiveTabKeys, useActiveTab } from 'easy-email-editor';
+import { ActiveTabKeys, useActiveTab } from 'easy-pdf-editor';
 import React from 'react';
 import { FocusTooltip } from './components/FocusTooltip';
 import { HoverTooltip } from './components/HoverTooltip';
@@ -13,7 +13,6 @@ export function InteractivePrompt() {
     <>
       <HoverTooltip />
       <FocusTooltip />
-
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { IconEye, IconEyeInvisible } from '@arco-design/web-react/icon';
 import React, { useCallback } from 'react';
-import { Stack, TextStyle, useBlock } from 'easy-email-editor';
+import { Stack, TextStyle, useBlock } from 'easy-pdf-editor';
 import { BasicType, BlockManager } from 'easy-pdf-core';
 
 export interface AttributesPanelWrapper {

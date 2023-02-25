@@ -1,4 +1,4 @@
-import { useEditorContext, useEditorProps } from 'easy-email-editor';
+import { useEditorContext, useEditorProps } from 'easy-pdf-editor';
 import React, { useMemo } from 'react';
 
 export function useFontFamily() {
@@ -20,10 +20,13 @@ export function useFontFamily() {
       fonts.unshift(...options);
     }
 
-    return fonts.map(item => ({ value: item.value, label: <span style={{ fontFamily: item.value }}>{item.label}</span> }));
+    return fonts.map(item => ({
+      value: item.value,
+      label: <span style={{ fontFamily: item.value }}>{item.label}</span>,
+    }));
   }, [addFonts, defaultFontList]);
 
   return {
-    fontList
+    fontList,
   };
 }

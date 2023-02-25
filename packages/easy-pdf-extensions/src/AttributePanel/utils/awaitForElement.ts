@@ -1,12 +1,11 @@
-import { getBlockNodeByIdx } from 'easy-email-editor';
+import { getBlockNodeByIdx } from 'easy-pdf-editor';
 
 export function awaitForElement<T extends HTMLElement>(idx: string) {
-
-  let promiseObj: { cancel: () => void; promise: Promise<T>; } = {
-    cancel: () => { },
-    promise: Promise.resolve() as any
+  let promiseObj: { cancel: () => void; promise: Promise<T> } = {
+    cancel: () => {},
+    promise: Promise.resolve() as any,
   };
-  promiseObj.promise = new Promise<T>((resolve) => {
+  promiseObj.promise = new Promise<T>(resolve => {
     const ele = getBlockNodeByIdx(idx) as T;
     if (ele) {
       resolve(ele);
@@ -28,5 +27,4 @@ export function awaitForElement<T extends HTMLElement>(idx: string) {
   });
 
   return promiseObj;
-
 }

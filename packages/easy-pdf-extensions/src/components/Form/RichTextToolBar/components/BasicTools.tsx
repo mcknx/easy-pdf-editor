@@ -1,4 +1,4 @@
-import { IconFont, useBlock, useEditorProps, useFocusIdx } from 'easy-email-editor';
+import { IconFont, useBlock, useEditorProps, useFocusIdx } from 'easy-pdf-editor';
 import { useAddToCollection } from '@extensions/hooks/useAddToCollection';
 import { getParentIdx } from 'easy-pdf-core';
 import React from 'react';

@@ -8,12 +8,7 @@ import {
   JsonToMjml,
   MjmlToJson,
 } from 'easy-pdf-core';
-import {
-  useBlock,
-  useFocusIdx,
-  useEditorContext,
-  useEditorProps,
-} from 'easy-email-editor';
+import { useBlock, useFocusIdx, useEditorContext, useEditorProps } from 'easy-pdf-editor';
 import { cloneDeep } from 'lodash';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 

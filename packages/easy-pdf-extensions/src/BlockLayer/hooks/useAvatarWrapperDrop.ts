@@ -12,7 +12,7 @@ import {
   useDataTransfer,
   useHoverIdx,
   useRefState,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import { debounce, get } from 'lodash';
 import { IBlockDataWithId } from '..';
 import { BlockTreeProps } from '../components/BlockTree';

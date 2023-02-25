@@ -1,5 +1,11 @@
 import React from 'react';
-import { getShadowRoot, TextStyle, useBlock, useEditorContext, useFocusIdx } from 'easy-email-editor';
+import {
+  getShadowRoot,
+  TextStyle,
+  useBlock,
+  useEditorContext,
+  useFocusIdx,
+} from 'easy-pdf-editor';
 import { RichTextField } from '../components/Form/RichTextField';
 import { PresetColorsProvider } from './components/provider/PresetColorsProvider';
 import ReactDOM from 'react-dom';

@@ -10,7 +10,7 @@ import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/at
 import { Collapse, Grid, Space } from '@arco-design/web-react';
 import { IconLink } from '@arco-design/web-react/icon';
 import { NavbarLinkPadding } from '@extensions/AttributePanel/components/attributes/NavbarLinkPadding';
-import { useFocusIdx, Stack } from 'easy-email-editor';
+import { useFocusIdx, Stack } from 'easy-pdf-editor';
 import { INavbar } from 'easy-pdf-core';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';

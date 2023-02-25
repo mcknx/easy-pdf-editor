@@ -1,6 +1,6 @@
 import React from 'react';
 import { AdvancedType } from 'easy-pdf-core';
-import { Stack, TextStyle } from 'easy-email-editor';
+import { Stack, TextStyle } from 'easy-pdf-editor';
 
 import { TextBlockItem } from './TextBlockItem';
 import { ImageBlockItem } from './ImageBlockItem';

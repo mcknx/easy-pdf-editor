@@ -8,7 +8,7 @@ import {
   useFocusIdx,
   BlockAvatarWrapper,
   useFocusBlockLayout,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import { Toolbar } from './Toolbar';
 
 export function FocusTooltip() {

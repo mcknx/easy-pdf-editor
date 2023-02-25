@@ -9,19 +9,17 @@ import {
   CONTENT_EDITABLE_CLASS_NAME,
   DATA_CONTENT_EDITABLE_TYPE,
   ContentEditableType,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import React, { useCallback, useEffect, useState } from 'react';
 import { InlineText, InlineTextProps } from '../InlineTextField';
 import { RichTextToolBar } from '../RichTextToolBar';
 import { Field, FieldInputProps } from 'react-final-form';
 import { debounce } from 'lodash';
 
-export const RichTextField = (
-  props: Omit<InlineTextProps, 'onChange' | 'mutators'>
-) => {
+export const RichTextField = (props: Omit<InlineTextProps, 'onChange' | 'mutators'>) => {
   const [contentEditableName, setContentEditableName] = useState('');
   const [contentEditableType, setContentEditableType] = useState<string | null>(
-    CONTENT_EDITABLE_CLASS_NAME
+    CONTENT_EDITABLE_CLASS_NAME,
   );
 
   useEffect(() => {
@@ -78,7 +76,10 @@ export const RichTextField = (
 
   return (
     <>
-      <Field name={contentEditableName} parse={(v) => v}>
+      <Field
+        name={contentEditableName}
+        parse={v => v}
+      >
         {({ input }) => (
           <FieldWrapper
             {...props}
@@ -95,14 +96,14 @@ function FieldWrapper(
   props: Omit<InlineTextProps, 'onChange'> & {
     input: FieldInputProps<any, HTMLElement>;
     contentEditableType: string | null;
-  }
+  },
 ) {
   const { input, contentEditableType, ...rest } = props;
   const { mergeTagGenerate, enabledMergeTagsBadge } = useEditorProps();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debounceCallbackChange = useCallback(
-    debounce((val) => {
+    debounce(val => {
       if (enabledMergeTagsBadge) {
         input.onChange(MergeTagBadge.revert(val, mergeTagGenerate));
       } else {
@@ -111,7 +112,7 @@ function FieldWrapper(
 
       input.onBlur();
     }, 200),
-    [input]
+    [input],
   );
 
   return (
@@ -119,7 +120,11 @@ function FieldWrapper(
       {contentEditableType === ContentEditableType.RichText && (
         <RichTextToolBar onChange={debounceCallbackChange} />
       )}
-      <InlineText {...rest} onChange={debounceCallbackChange} />;
+      <InlineText
+        {...rest}
+        onChange={debounceCallbackChange}
+      />
+      ;
     </>
   );
 }

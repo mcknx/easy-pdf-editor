@@ -15,7 +15,7 @@ export default defineConfig({
     alias: {
       '@extensions': path.resolve('./src'),
       'easy-pdf-core': path.resolve('../easy-pdf-core/lib'),
-      'easy-email-editor': path.resolve('../easy-email-editor/lib'),
+      'easy-pdf-editor': path.resolve('../easy-pdf-editor/lib'),
     },
   },
   define: {},
@@ -40,7 +40,7 @@ export default defineConfig({
         'mjml-browser',
         'react-final-form',
         'easy-pdf-core',
-        'easy-email-editor',
+        'easy-pdf-editor',
       ],
       output: {},
     },

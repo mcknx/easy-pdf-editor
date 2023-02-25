@@ -4,7 +4,7 @@ import { Background } from '@extensions/AttributePanel/components/attributes/Bac
 import { Border } from '@extensions/AttributePanel/components/attributes/Border';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Collapse, Grid, Space, Switch } from '@arco-design/web-react';
-import { Stack, useBlock } from 'easy-email-editor';
+import { Stack, useBlock } from 'easy-pdf-editor';
 import { BasicType, BlockManager } from 'easy-pdf-core';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';

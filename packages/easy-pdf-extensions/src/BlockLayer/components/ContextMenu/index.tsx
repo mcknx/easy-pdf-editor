@@ -5,7 +5,7 @@ import {
   scrollBlockEleIntoView,
   useBlock,
   useEditorProps,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import { getIndexByIdx, getSiblingIdx } from 'easy-pdf-core';
 import styles from './index.module.scss';
 import { IBlockDataWithId } from '../../../BlockLayer';

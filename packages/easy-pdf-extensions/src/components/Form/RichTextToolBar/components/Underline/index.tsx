@@ -1,6 +1,6 @@
 import { PopoverProps, Tooltip } from '@arco-design/web-react';
 import React, { useCallback, useMemo } from 'react';
-import { IconFont } from 'easy-email-editor';
+import { IconFont } from 'easy-pdf-editor';
 import { ToolItem } from '../ToolItem';
 import { EMAIL_BLOCK_CLASS_NAME } from 'easy-pdf-core';
 import { useSelectionRange } from '@extensions/AttributePanel/hooks/useSelectionRange';

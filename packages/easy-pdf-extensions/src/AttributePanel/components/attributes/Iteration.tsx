@@ -1,4 +1,4 @@
-import { useBlock, useFocusIdx } from 'easy-email-editor';
+import { useBlock, useFocusIdx } from 'easy-pdf-editor';
 import { Collapse, Grid, Switch } from '@arco-design/web-react';
 import { AdvancedBlock, AdvancedType } from 'easy-pdf-core';
 import { TextField } from '@extensions/components/Form';

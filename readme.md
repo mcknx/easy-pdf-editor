@@ -11,8 +11,8 @@
 <p align="center">
 
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
-  <a aria-label="NPM version" href="https://www.npmjs.com/package/easy-email-editor">
-    <img alt="" src="https://badgen.net/npm/v/easy-email-editor">
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/easy-pdf-editor">
+    <img alt="" src="https://badgen.net/npm/v/easy-pdf-editor">
   </a>
   <a aria-label="React version" href="https://react.js">
     <img alt="" src="https://img.shields.io/badge/React-17.0-yellow.svg">
@@ -23,7 +23,7 @@
   <a aria-label="Package size" href="https://www.typescriptlang.org/">
     <img alt="Using TypeScript" src="https://img.shields.io/badge/%3C/%3E-TypeScript-brightgreenred.svg">
   </a>
-  <img alt="" src="https://badgen.net/npm/license/easy-email-editor">
+  <img alt="" src="https://badgen.net/npm/license/easy-pdf-editor">
 </p>
 
 ## Join Our Community
@@ -75,23 +75,23 @@ If you like this project, please consider donating.
 ## Getting started
 
 ```sh
-$ npm install --save easy-pdf-core easy-email-editor easy-pdf-extensions react-final-form
+$ npm install --save easy-pdf-core easy-pdf-editor easy-pdf-extensions react-final-form
 ```
 
 or
 
 ```sh
-$ yarn add easy-pdf-core easy-email-editor easy-pdf-extensions react-final-form
+$ yarn add easy-pdf-core easy-pdf-editor easy-pdf-extensions react-final-form
 ```
 
 ```js
 import React from 'react';
 import { BlockManager, BasicType, AdvancedType } from 'easy-pdf-core';
-import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
+import { EmailEditor, EmailEditorProvider } from 'easy-pdf-editor';
 import { ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { useWindowSize } from 'react-use';
 
-import 'easy-email-editor/lib/style.css';
+import 'easy-pdf-editor/lib/style.css';
 import 'easy-pdf-extensions/lib/style.css';
 
 // theme, If you need to change the theme, you can make a duplicate in https://arco.design/themes/design/1799/setting/base/Color
@@ -169,7 +169,7 @@ export default function App() {
 ## Packages
 
 - [easy-pdf-core](./packages/easy-pdf-core/readme.md)
-- [easy-email-editor](./packages/easy-email-editor/readme.md)
+- [easy-pdf-editor](./packages/easy-pdf-editor/readme.md)
 - [easy-pdf-extensions](./packages/easy-pdf-extensions/readme.md)
 
 </br>

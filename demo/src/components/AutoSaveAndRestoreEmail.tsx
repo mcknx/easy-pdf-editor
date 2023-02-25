@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useForm, useFormState } from 'react-final-form';
 import { useInterval, useLocalStorage } from 'react-use';
 import { WarnAboutUnsavedChanges } from './WarnAboutUnsavedChanges';
-import { IEmailTemplate } from 'easy-email-editor';
+import { IEmailTemplate } from 'easy-pdf-editor';
 import { Modal } from '@arco-design/web-react';
 import { getIsFormTouched } from '@demo/utils/getIsFormTouched';
 import { useQuery } from '@demo/hooks/useQuery';
@@ -12,8 +12,10 @@ export function AutoSaveAndRestoreEmail() {
   const { reset, mutators } = useForm();
   const { id = 'new' } = useQuery<{ id: string }>();
 
-  const [currentEmail, setCurrentEmail] =
-    useLocalStorage<IEmailTemplate | null>(id, null);
+  const [currentEmail, setCurrentEmail] = useLocalStorage<IEmailTemplate | null>(
+    id,
+    null,
+  );
   const dirty = getIsFormTouched(formState.touched as any);
 
   const [visible, setVisible] = useState(Boolean(currentEmail));

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 
 import { Padding } from '../../attributes/Padding';
 import { BackgroundColor } from '../../attributes/BackgroundColor';
@@ -18,7 +18,10 @@ export function AccordionText() {
   return (
     <AttributesPanelWrapper>
       <Collapse defaultActiveKey={['0', '1', '2']}>
-        <Collapse.Item name='0' header={t('Setting')}>
+        <Collapse.Item
+          name='0'
+          header={t('Setting')}
+        >
           <Space direction='vertical'>
             <TextAreaField
               label={t('Content')}
@@ -29,7 +32,10 @@ export function AccordionText() {
               <Grid.Col span={11}>
                 <Color />
               </Grid.Col>
-              <Grid.Col offset={1} span={11}>
+              <Grid.Col
+                offset={1}
+                span={11}
+              >
                 <FontSize />
               </Grid.Col>
             </Grid.Row>
@@ -37,7 +43,10 @@ export function AccordionText() {
               <Grid.Col span={11}>
                 <LineHeight />
               </Grid.Col>
-              <Grid.Col offset={1} span={11}>
+              <Grid.Col
+                offset={1}
+                span={11}
+              >
                 <FontWeight />
               </Grid.Col>
             </Grid.Row>
@@ -45,12 +54,18 @@ export function AccordionText() {
               <Grid.Col span={11}>
                 <FontFamily />
               </Grid.Col>
-              <Grid.Col offset={1} span={11}>
+              <Grid.Col
+                offset={1}
+                span={11}
+              >
                 <BackgroundColor />
               </Grid.Col>
             </Grid.Row>
 
-            <Padding title={t('Padding')} attributeName='padding' />
+            <Padding
+              title={t('Padding')}
+              attributeName='padding'
+            />
           </Space>
         </Collapse.Item>
       </Collapse>

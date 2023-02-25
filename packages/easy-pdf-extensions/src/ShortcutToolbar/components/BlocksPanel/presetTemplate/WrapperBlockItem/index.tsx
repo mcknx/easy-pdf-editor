@@ -1,6 +1,6 @@
 import React from 'react';
 import { AdvancedType } from 'easy-pdf-core';
-import { Stack } from 'easy-email-editor';
+import { Stack } from 'easy-pdf-editor';
 
 import { BlockMaskWrapper } from '@extensions/ShortcutToolbar/components/BlockMaskWrapper';
 import { getImg } from '@extensions/ShortcutToolbar/utils/getImg';

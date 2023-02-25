@@ -8,12 +8,15 @@ import {
 } from '@extensions/components/Form';
 import { AddFont } from '@extensions/components/Form/AddFont';
 import { Collapse, Grid, Space } from '@arco-design/web-react';
-import { Stack, useFocusIdx } from 'easy-email-editor';
+import { Stack, useFocusIdx } from 'easy-pdf-editor';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { FontFamily } from '../../attributes/FontFamily';
 import { pixelAdapter } from '../../adapter';
 
-interface PageProps { hideSubTitle?: boolean; hideSubject?: boolean}
+interface PageProps {
+  hideSubTitle?: boolean;
+  hideSubject?: boolean;
+}
 export function Page({ hideSubTitle, hideSubject }: PageProps) {
   const { focusIdx } = useFocusIdx();
 

@@ -1,13 +1,16 @@
 import React, { useMemo } from 'react';
 import { TextField } from '../../../components/Form';
-import { useFocusIdx, Stack, TextStyle } from 'easy-email-editor';
+import { useFocusIdx, Stack, TextStyle } from 'easy-pdf-editor';
 
 export function Margin() {
   const { focusIdx } = useFocusIdx();
 
   return useMemo(() => {
     return (
-      <Stack vertical spacing='extraTight'>
+      <Stack
+        vertical
+        spacing='extraTight'
+      >
         <TextStyle size='large'>{t('Margin')}</TextStyle>
         <Stack wrap={false}>
           <Stack.Item fill>

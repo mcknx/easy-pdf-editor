@@ -9,7 +9,7 @@ import {
   useFocusIdx,
   useHoverIdx,
   useRefState,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import {
   BasicType,
   BlockManager,

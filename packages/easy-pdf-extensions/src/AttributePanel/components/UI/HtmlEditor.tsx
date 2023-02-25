@@ -7,7 +7,7 @@ import {
   useBlock,
   useEditorContext,
   useFocusIdx,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import { ShadowDom } from '@extensions/components/ShadowDom';
 
 const CodeMirrorEditorPromise = import('../../../components/Form/CodemirrorEditor');

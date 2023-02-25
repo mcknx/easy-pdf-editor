@@ -11,7 +11,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      'easy-email-editor/lib/style.css': path.resolve(__dirname, 'package.json'), // 没有用的，只是防止css 404报错
+      'easy-pdf-editor/lib/style.css': path.resolve(__dirname, 'package.json'), // 没有用的，只是防止css 404报错
       'easy-pdf-extensions/lib/style.css': path.resolve(__dirname, 'package.json'), // 没有用的，只是防止css 404报错
       react: path.resolve('./node_modules/react'),
       'react-final-form': path.resolve(__dirname, './node_modules/react-final-form'),
@@ -19,14 +19,14 @@ export default defineConfig({
       '@extensions': path.resolve('../packages/easy-pdf-extensions/src'),
       '@core': path.resolve('../packages/easy-pdf-core/src'),
       '@arco-themes': path.resolve('./node_modules/@arco-themes'),
-      '@': path.resolve('../packages/easy-email-editor/src'),
+      '@': path.resolve('../packages/easy-pdf-editor/src'),
       'easy-pdf-core': path.resolve('../packages/easy-pdf-core/src/index.tsx'),
       'easy-pdf-core': path.resolve('../packages/easy-pdf-core/src/index.tsx'),
-      'easy-email-editor/lib/locales.json': path.resolve(
-        '../packages/easy-email-editor/public/locales.json',
+      'easy-pdf-editor/lib/locales.json': path.resolve(
+        '../packages/easy-pdf-editor/public/locales.json',
       ),
       'easy-pdf-localization': path.resolve('../packages/easy-pdf-localization'),
-      'easy-email-editor': path.resolve('../packages/easy-email-editor/src/index.tsx'),
+      'easy-pdf-editor': path.resolve('../packages/easy-pdf-editor/src/index.tsx'),
       'easy-pdf-extensions': path.resolve(
         '../packages/easy-pdf-extensions/src/index.tsx',
       ),
@@ -58,7 +58,7 @@ export default defineConfig({
             return 'mjml-browser';
           }
           if (/easy-email.*/.test(id)) {
-            return 'easy-email-editor';
+            return 'easy-pdf-editor';
           }
         },
       },

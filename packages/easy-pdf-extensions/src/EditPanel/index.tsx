@@ -1,5 +1,5 @@
 import { Layout, Tabs } from '@arco-design/web-react';
-import { useEditorProps } from 'easy-email-editor';
+import { useEditorProps } from 'easy-pdf-editor';
 import React from 'react';
 import { Blocks } from './Blocks';
 import { BlockLayer } from '@extensions/BlockLayer';

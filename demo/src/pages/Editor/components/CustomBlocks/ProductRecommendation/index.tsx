@@ -10,7 +10,7 @@ import {
 import { CustomBlocksType } from '../constants';
 import React from 'react';
 import { merge } from 'lodash';
-import { getContentEditableClassName } from 'easy-email-editor';
+import { getContentEditableClassName } from 'easy-pdf-editor';
 
 const { Column, Section, Wrapper, Text, Button, Image, Group } = components;
 

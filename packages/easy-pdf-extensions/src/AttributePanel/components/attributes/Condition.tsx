@@ -1,4 +1,4 @@
-import { useBlock, useFocusIdx } from 'easy-email-editor';
+import { useBlock, useFocusIdx } from 'easy-pdf-editor';
 import {
   AdvancedBlock,
   OperatorSymbol,

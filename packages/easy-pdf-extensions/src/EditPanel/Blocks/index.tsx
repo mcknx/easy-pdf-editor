@@ -1,6 +1,6 @@
 import { Collapse, Grid, Space, Typography } from '@arco-design/web-react';
 import { AdvancedType, BlockManager, IBlockData } from 'easy-pdf-core';
-import { BlockAvatarWrapper, IconFont } from 'easy-email-editor';
+import { BlockAvatarWrapper, IconFont } from 'easy-pdf-editor';
 import React, { useMemo, useState } from 'react';
 import { IconCaretRight, IconCaretUp } from '@arco-design/web-react/icon';
 import { getIconNameByBlockType } from '@extensions/utils/getIconNameByBlockType';

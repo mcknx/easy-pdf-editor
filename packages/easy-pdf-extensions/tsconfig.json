@@ -23,12 +23,12 @@
     "paths": {
       "@core": ["../easy-email-core/src"],
       "@core/*": ["../easy-email-core/src/*"],
-      "@": ["../easy-email-editor/src"],
-      "@/*": ["../easy-email-editor/src/*"],
+      "@": ["../easy-pdf-editor/src"],
+      "@/*": ["../easy-pdf-editor/src/*"],
       "@extensions": ["./src"],
       "@extensions/*": ["./src/*"],
       "easy-email-core": ["../easy-email-core/src/index.tsx"],
-      "easy-email-editor": ["../easy-email-editor/src/index.tsx"]
+      "easy-pdf-editor": ["../easy-pdf-editor/src/index.tsx"]
     }
   },
   "include": ["./src", "./typings"],

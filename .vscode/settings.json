@@ -48,7 +48,7 @@
   "cSpell.words": ["Mjml"],
   "eslint.workingDirectories": [
     "packages/easy-email-core",
-    "packages/easy-email-editor",
+    "packages/easy-pdf-editor",
     "packages/easy-email-extensions"
   ]
 }

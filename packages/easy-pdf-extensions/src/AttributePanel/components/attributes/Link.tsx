@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 import { IconLink } from '@arco-design/web-react/icon';
 import { SelectField, TextField } from '../../../components/Form';
 import { Grid } from '@arco-design/web-react';
@@ -17,7 +17,10 @@ export function Link() {
             name={`${focusIdx}.attributes.href`}
           />
         </Grid.Col>
-        <Grid.Col offset={1} span={11}>
+        <Grid.Col
+          offset={1}
+          span={11}
+        >
           <SelectField
             label={t('Target')}
             name={`${focusIdx}.attributes.target`}

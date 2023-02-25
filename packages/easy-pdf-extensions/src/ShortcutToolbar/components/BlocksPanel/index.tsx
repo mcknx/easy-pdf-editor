@@ -2,19 +2,19 @@ import { Card, Tabs } from '@arco-design/web-react';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import styles from './index.module.scss';
 import { createPortal } from 'react-dom';
-import { IconFont, Stack, useHoverIdx } from 'easy-email-editor';
+import { IconFont, Stack, useHoverIdx } from 'easy-pdf-editor';
 import { BlockMarketCategory, BlockMarketManager } from '../../utils/BlockMarketManager';
 import { defaultCategories } from './presetTemplate';
 import { Help } from '@extensions/AttributePanel/components/UI/Help';
 
 BlockMarketManager.addCategories(defaultCategories);
 
-export const BlocksPanel: React.FC = (props) => {
+export const BlocksPanel: React.FC = props => {
   const { isDragging } = useHoverIdx();
   const [visible, setVisible] = useState(false);
   const [ele, setEle] = useState<HTMLElement | null>(null);
   const [categories, setCategories] = useState<BlockMarketCategory[]>(
-    BlockMarketManager.getCategories()
+    BlockMarketManager.getCategories(),
   );
 
   useEffect(() => {
@@ -34,16 +34,19 @@ export const BlocksPanel: React.FC = (props) => {
   }, []);
 
   const toggleVisible = useCallback(() => {
-    setVisible((v) => !v);
+    setVisible(v => !v);
   }, []);
 
   const filterCategories = useMemo(() => {
-    return categories.filter((item) => item.blocks.length > 0);
+    return categories.filter(item => item.blocks.length > 0);
   }, [categories]);
 
   return useMemo(
     () => (
-      <div ref={setEle} style={{ position: 'relative' }}>
+      <div
+        ref={setEle}
+        style={{ position: 'relative' }}
+      >
         <div onClick={toggleVisible}>{props.children}</div>
 
         {ele &&
@@ -68,13 +71,19 @@ export const BlocksPanel: React.FC = (props) => {
               <Card
                 bodyStyle={{ padding: 0 }}
                 title='Drag block'
-                extra={(
+                extra={
                   <div className={styles.closeBtn}>
-                    <IconFont iconName='icon-close' onClick={toggleVisible} />
+                    <IconFont
+                      iconName='icon-close'
+                      onClick={toggleVisible}
+                    />
                   </div>
-                )}
+                }
               >
-                <Tabs tabPosition='left' size='large'>
+                <Tabs
+                  tabPosition='left'
+                  size='large'
+                >
                   {filterCategories.map((category, index) => (
                     <Tabs.TabPane
                       style={{
@@ -83,7 +92,7 @@ export const BlocksPanel: React.FC = (props) => {
                         height: 500,
                       }}
                       key={category.title}
-                      title={(
+                      title={
                         <div
                           style={{
                             paddingTop: index === 0 ? 5 : undefined,
@@ -92,7 +101,7 @@ export const BlocksPanel: React.FC = (props) => {
                         >
                           {category.title}
                         </div>
-                      )}
+                      }
                     >
                       <BlockPanelItem category={category} />
                     </Tabs.TabPane>
@@ -100,17 +109,17 @@ export const BlocksPanel: React.FC = (props) => {
                 </Tabs>
               </Card>
             </div>,
-            ele
+            ele,
           )}
       </div>
     ),
-    [filterCategories, ele, isDragging, props.children, toggleVisible, visible]
+    [filterCategories, ele, isDragging, props.children, toggleVisible, visible],
   );
 };
 
 const BlockPanelItem: React.FC<{
   category: BlockMarketCategory;
-}> = React.memo((props) => {
+}> = React.memo(props => {
   return (
     <Tabs tabPosition='left'>
       {props.category.blocks.map((block, index) => {
@@ -118,12 +127,15 @@ const BlockPanelItem: React.FC<{
           <Tabs.TabPane
             style={{ padding: 0, height: 500 }}
             key={block.title}
-            title={(
-              <Stack alignment='center' spacing='extraTight'>
+            title={
+              <Stack
+                alignment='center'
+                spacing='extraTight'
+              >
                 <div className={styles.blockItem}>{block.title}</div>
                 {block.description && <Help title={block.description} />}
               </Stack>
-            )}
+            }
           >
             <div
               className='small-scrollbar'

@@ -1,4 +1,4 @@
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 import { Drawer } from '@arco-design/web-react';
 import { ConfigurationPanel } from '@extensions/ConfigurationPanel';
 import React, { useCallback, useMemo, useRef } from 'react';

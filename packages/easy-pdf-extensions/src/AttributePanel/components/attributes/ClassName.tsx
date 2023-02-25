@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 import { TextField } from '../../../components/Form';
 
 export function ClassName() {
@@ -7,7 +7,10 @@ export function ClassName() {
 
   return useMemo(() => {
     return (
-      <TextField label={t('Class name')} name={`${focusIdx}.attributes.css-class`} />
+      <TextField
+        label={t('Class name')}
+        name={`${focusIdx}.attributes.css-class`}
+      />
     );
   }, [focusIdx]);
 }

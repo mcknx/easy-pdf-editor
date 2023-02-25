@@ -1,8 +1,8 @@
 import React from 'react';
 import { InputWithUnitField } from '../../../components/Form';
-import { useFocusIdx } from 'easy-email-editor';
+import { useFocusIdx } from 'easy-pdf-editor';
 
-export function LineHeight({ name }: { name?: string; }) {
+export function LineHeight({ name }: { name?: string }) {
   const { focusIdx } = useFocusIdx();
 
   return (

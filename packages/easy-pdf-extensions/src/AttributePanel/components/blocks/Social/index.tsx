@@ -20,7 +20,7 @@ import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/at
 import { Collapse, Grid, Space } from '@arco-design/web-react';
 import { TextDecoration } from '@extensions/AttributePanel/components/attributes/TextDecoration';
 import { LineHeight } from '@extensions/AttributePanel/components/attributes/LineHeight';
-import { useBlock, useEditorProps, useFocusIdx } from 'easy-email-editor';
+import { useBlock, useEditorProps, useFocusIdx } from 'easy-pdf-editor';
 import { ISocial } from 'easy-pdf-core';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';

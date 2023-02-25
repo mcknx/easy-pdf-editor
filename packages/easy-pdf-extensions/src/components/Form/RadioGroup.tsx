@@ -1,7 +1,7 @@
 import { Radio, RadioGroupProps as ArcoRadioGroupProps } from '@arco-design/web-react';
 import { merge } from 'lodash';
 import React from 'react';
-import { Stack } from 'easy-email-editor';
+import { Stack } from 'easy-pdf-editor';
 
 export interface RadioGroupProps extends ArcoRadioGroupProps {
   options: Array<{ value: string; label: React.ReactNode }>;
@@ -20,9 +20,15 @@ export function RadioGroup(props: RadioGroupProps) {
       value={rest.value}
       onChange={rest.onChange}
     >
-      <Stack vertical={vertical} spacing='extraTight'>
+      <Stack
+        vertical={vertical}
+        spacing='extraTight'
+      >
         {rest.options.map((item, index) => (
-          <Radio key={index} value={item.value}>
+          <Radio
+            key={index}
+            value={item.value}
+          >
             {item.label}
           </Radio>
         ))}

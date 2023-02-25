@@ -1,4 +1,4 @@
-import { IconFont } from 'easy-email-editor';
+import { IconFont } from 'easy-pdf-editor';
 import { BasicType } from 'easy-pdf-core';
 import React from 'react';
 import { IBlockDataWithId } from '../..';

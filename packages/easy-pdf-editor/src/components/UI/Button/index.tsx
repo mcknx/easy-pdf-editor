@@ -8,13 +8,13 @@ export interface ButtonProps {
   noBorder?: boolean;
   onClick?: React.DOMAttributes<HTMLButtonElement>['onClick'];
 }
-export const Button: React.FC<ButtonProps> = (props) => {
+export const Button: React.FC<ButtonProps> = props => {
   return (
     <button
       onClick={props.onClick}
       className={classnames(
-        'easy-email-editor-button',
-        props.noBorder && 'easy-email-editor-noBorder'
+        'easy-pdf-editor-button',
+        props.noBorder && 'easy-pdf-editor-noBorder',
       )}
       title={props.title}
       disabled={props.disabled}

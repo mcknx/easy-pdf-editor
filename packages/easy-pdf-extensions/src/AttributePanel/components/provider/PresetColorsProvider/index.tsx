@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo, useRef } from 'react';
 import { useLocalStorage } from 'react-use';
 import { debounce } from 'lodash';
-import { useRefState } from 'easy-email-editor';
+import { useRefState } from 'easy-pdf-editor';
 
 const defaultPresetColor: string[] = [
   '#000000',
@@ -25,10 +25,10 @@ export const PresetColorsContext = React.createContext<{
   addCurrentColor: () => {},
 });
 
-export const PresetColorsProvider: React.FC<{}> = (props) => {
+export const PresetColorsProvider: React.FC<{}> = props => {
   const [currentColors, setCurrentColors] = useLocalStorage<string[]>(
     CURRENT_COLORS_KEY,
-    defaultPresetColor
+    defaultPresetColor,
   );
   const currentColorsRef = useRefState(currentColors);
 
@@ -47,7 +47,7 @@ export const PresetColorsProvider: React.FC<{}> = (props) => {
         setCurrentColors(newColors);
       }
     }, 500),
-    [currentColorsRef, setCurrentColors]
+    [currentColorsRef, setCurrentColors],
   );
 
   const value = useMemo(() => {

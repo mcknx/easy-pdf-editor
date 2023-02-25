@@ -1,27 +1,27 @@
-[arco-theme="dark"] {
-  .easy-email-editor-tabWrapper {
+[arco-theme='dark'] {
+  .easy-pdf-editor-tabWrapper {
     background-color: var(--color-bg-3);
   }
   .arco-layout {
     background-color: var(--color-bg-3);
   }
-  .easy-email-editor-button {
+  .easy-pdf-editor-button {
     background-color: var(--color-secondary);
     color: var(--color-text-2);
     border: 1px solid transparent;
   }
-  .easy-email-editor-button:hover {
+  .easy-pdf-editor-button:hover {
     border-color: var(--color-neutral-4);
     color: var(--color-text-2);
     background-color: var(--color-fill-3);
   }
 
-  .easy-email-editor-button[disabled] {
+  .easy-pdf-editor-button[disabled] {
     background-color: var(--color-secondary);
     color: var(--color-text-2);
     border: 1px solid transparent;
   }
-  .easy-email-editor-button[disabled]:hover {
+  .easy-pdf-editor-button[disabled]:hover {
     background-color: var(--color-secondary);
     color: var(--color-text-2);
     border: 1px solid transparent;

@@ -21,7 +21,7 @@ import {
   EmailEditorProvider,
   EmailEditorProviderProps,
   IEmailTemplate,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 
 import { Stack } from '@demo/components/Stack';
 import { pushEvent } from '@demo/utils/pushEvent';
@@ -36,7 +36,7 @@ import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmai
 // Register external blocks
 import './components/CustomBlocks';
 
-import 'easy-email-editor/lib/style.css';
+import 'easy-pdf-editor/lib/style.css';
 import 'easy-pdf-extensions/lib/style.css';
 import blueTheme from '@arco-themes/react-easy-email-theme/css/arco.css?inline';
 import purpleTheme from '@arco-themes/react-easy-email-theme-purple/css/arco.css?inline';

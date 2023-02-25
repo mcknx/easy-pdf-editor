@@ -1,6 +1,10 @@
 import React from 'react';
 import { Padding } from '@extensions/AttributePanel/components/attributes/Padding';
-import { ColorPickerField, ImageUploaderField, TextField } from '@extensions/components/Form';
+import {
+  ColorPickerField,
+  ImageUploaderField,
+  TextField,
+} from '@extensions/components/Form';
 import { Width } from '@extensions/AttributePanel/components/attributes/Width';
 import { Height } from '@extensions/AttributePanel/components/attributes/Height';
 import { Link } from '@extensions/AttributePanel/components/attributes/Link';
@@ -9,7 +13,7 @@ import { Align } from '@extensions/AttributePanel/components/attributes/Align';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Collapse, Grid, Space } from '@arco-design/web-react';
 import { Border } from '@extensions/AttributePanel/components/attributes/Border';
-import { Stack, useEditorProps, useFocusIdx } from 'easy-email-editor';
+import { Stack, useEditorProps, useFocusIdx } from 'easy-pdf-editor';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';
 import { imageHeightAdapter, pixelAdapter } from '../../adapter';
 
@@ -32,7 +36,9 @@ export function Image() {
               label={t('src')}
               labelHidden
               name={`${focusIdx}.attributes.src`}
-              helpText={t('The image suffix should be .jpg, jpeg, png, gif, etc. Otherwise, the picture may not be displayed normally.')}
+              helpText={t(
+                'The image suffix should be .jpg, jpeg, png, gif, etc. Otherwise, the picture may not be displayed normally.',
+              )}
               uploadHandler={onUploadImage}
             />
             <ColorPickerField

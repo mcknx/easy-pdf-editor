@@ -23,10 +23,10 @@
       "@demo": ["src"],
       "@demo/*": ["src/*"],
       "easy-pdf-localization/*": ["../packages/easy-pdf-localization/*"],
-      "easy-email-editor/lib/locales.json": [
-        "../packages/easy-email-editor/lib/locales.json"
+      "easy-pdf-editor/lib/locales.json": [
+        "../packages/easy-pdf-editor/lib/locales.json"
       ],
-      "easy-email-editor": ["../packages/easy-email-editor/src/index.tsx"],
+      "easy-pdf-editor": ["../packages/easy-pdf-editor/src/index.tsx"],
       "easy-email-core": ["../packages/easy-email-core/src/index.tsx"],
       "easy-pdf-core": ["../packages/easy-pdf-core/src/index.tsx"],
       "easy-email-extensions": ["../packages/easy-email-extensions/src/index.tsx"],

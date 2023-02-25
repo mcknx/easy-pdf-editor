@@ -1,5 +1,5 @@
 import { Card, ConfigProvider, Layout } from '@arco-design/web-react';
-import { useEditorProps, useFocusIdx } from 'easy-email-editor';
+import { useEditorProps, useFocusIdx } from 'easy-pdf-editor';
 import React, { useEffect } from 'react';
 import { InteractivePrompt } from '../InteractivePrompt';
 import styles from './index.module.scss';

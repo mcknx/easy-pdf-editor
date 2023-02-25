@@ -20,25 +20,25 @@ export interface TabPaneProps {
   className?: string;
 }
 
-const Tabs: React.FC<TabsProps> = (props) => {
-  const [activeTab, setActiveTab] = useState<string>(
-    props.defaultActiveTab || ''
-  );
+const Tabs: React.FC<TabsProps> = props => {
+  const [activeTab, setActiveTab] = useState<string>(props.defaultActiveTab || '');
 
-  const onClick = useCallback((nextTab: string) => {
-    if (!props.onBeforeChange) {
-      setActiveTab(nextTab);
-      props.onChange?.(nextTab);
-    }
-    if (props.onBeforeChange) {
-      const next = props.onBeforeChange(activeTab, nextTab);
-      if (next) {
+  const onClick = useCallback(
+    (nextTab: string) => {
+      if (!props.onBeforeChange) {
         setActiveTab(nextTab);
         props.onChange?.(nextTab);
       }
-    }
-
-  }, [activeTab, props]);
+      if (props.onBeforeChange) {
+        const next = props.onBeforeChange(activeTab, nextTab);
+        if (next) {
+          setActiveTab(nextTab);
+          props.onChange?.(nextTab);
+        }
+      }
+    },
+    [activeTab, props],
+  );
 
   useEffect(() => {
     if (props.activeTab) {
@@ -47,30 +47,33 @@ const Tabs: React.FC<TabsProps> = (props) => {
   }, [props.activeTab]);
 
   return (
-    <div style={props.style} className={props.className}>
-      <div className='easy-email-editor-tabWrapper'>
-        <Stack distribution='equalSpacing' alignment='center'>
+    <div
+      style={props.style}
+      className={props.className}
+    >
+      <div className='easy-pdf-editor-tabWrapper'>
+        <Stack
+          distribution='equalSpacing'
+          alignment='center'
+        >
           <Stack alignment='center'>
             {React.Children.map(
               props.children as any,
-              (item: { props: { tab: TabPaneProps; }; key: string; }, index) => {
+              (item: { props: { tab: TabPaneProps }; key: string }, index) => {
                 return (
                   <div
                     key={item.key}
                     onClick={() => onClick(item.key)}
                     className={classnames(
-                      'easy-email-editor-tabItem',
-                      !activeTab &&
-                      index === 0 &&
-                      'easy-email-editor-tabActiveItem',
-                      activeTab === item.key &&
-                      'easy-email-editor-tabActiveItem'
+                      'easy-pdf-editor-tabItem',
+                      !activeTab && index === 0 && 'easy-pdf-editor-tabActiveItem',
+                      activeTab === item.key && 'easy-pdf-editor-tabActiveItem',
                     )}
                   >
                     <Button noBorder>{item.props.tab}</Button>
                   </div>
                 );
-              }
+              },
             )}
           </Stack>
           {props.tabBarExtraContent}
@@ -78,7 +81,7 @@ const Tabs: React.FC<TabsProps> = (props) => {
       </div>
       {React.Children.map(
         props.children as any,
-        (item: { props: { tab: TabPaneProps; }; key: string; }, index) => {
+        (item: { props: { tab: TabPaneProps }; key: string }, index) => {
           const visible = (!activeTab && index === 0) || item.key === activeTab;
           return (
             <div
@@ -90,13 +93,13 @@ const Tabs: React.FC<TabsProps> = (props) => {
               {item}
             </div>
           );
-        }
+        },
       )}
     </div>
   );
 };
 
-const TabPane: React.FC<TabPaneProps> = (props) => {
+const TabPane: React.FC<TabPaneProps> = props => {
   return <>{props.children}</>;
 };
 

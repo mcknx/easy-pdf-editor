@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-wrap-multilines */
 
 import { AdvancedType, IButton, IImage } from 'easy-pdf-core';
-import { IconFont, Stack } from 'easy-email-editor';
+import { IconFont, Stack } from 'easy-pdf-editor';
 import React, { useRef } from 'react';
 import { BlocksPanel } from './components/BlocksPanel';
 import { DragIcon } from './components/DragIcon';

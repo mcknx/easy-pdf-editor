@@ -11,7 +11,7 @@ export default defineConfig({
       'react-final-form': path.resolve(__dirname, './node_modules/react-final-form'),
       'easy-pdf-localization': path.resolve('../packages/easy-pdf-localization'),
       'easy-pdf-core': path.resolve('../packages/easy-pdf-core'),
-      'easy-email-editor': path.resolve('../packages/easy-email-editor'),
+      'easy-pdf-editor': path.resolve('../packages/easy-pdf-editor'),
       'easy-pdf-extensions': path.resolve('../packages/easy-pdf-extensions'),
     },
   },

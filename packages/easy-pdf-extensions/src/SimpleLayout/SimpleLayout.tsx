@@ -1,6 +1,6 @@
 import { ShortcutToolbar } from '../ShortcutToolbar';
 import { Button, Card, ConfigProvider, Layout, Tabs } from '@arco-design/web-react';
-import { useEditorProps } from 'easy-email-editor';
+import { useEditorProps } from 'easy-pdf-editor';
 import React, { useState } from 'react';
 import { SourceCodePanel } from '../SourceCodePanel';
 import { AttributePanel } from '../AttributePanel';
@@ -104,7 +104,9 @@ export const SimpleLayout: React.FC<
             <Tabs className={styles.layoutTabs}>
               <Tabs.TabPane
                 title={
-                  <div style={{ height: 31, lineHeight: '31px' }}>{t('Configuration')}</div>
+                  <div style={{ height: 31, lineHeight: '31px' }}>
+                    {t('Configuration')}
+                  </div>
                 }
               >
                 <AttributePanel />
@@ -114,7 +116,9 @@ export const SimpleLayout: React.FC<
                   destroyOnHide
                   key='Source code'
                   title={
-                    <div style={{ height: 31, lineHeight: '31px' }}>{t('Source code')}</div>
+                    <div style={{ height: 31, lineHeight: '31px' }}>
+                      {t('Source code')}
+                    </div>
                   }
                 >
                   <SourceCodePanel />

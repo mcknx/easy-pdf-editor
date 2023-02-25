@@ -8,7 +8,7 @@ import {
   useFocusIdx,
   useHoverIdx,
   useLazyState,
-} from 'easy-email-editor';
+} from 'easy-pdf-editor';
 import { awaitForElement } from '@extensions/utils/awaitForElement';
 
 export function HoverTooltip() {

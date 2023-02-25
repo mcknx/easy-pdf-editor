@@ -1,4 +1,4 @@
-.easy-email-editor-tabWrapper {
+.easy-pdf-editor-tabWrapper {
   color: rgba(0, 0, 0, 0.85);
   font-size: 14px;
   padding: 0 8px;
@@ -11,7 +11,7 @@
   border: 1px solid var(--color-neutral-3, rgb(229, 230, 235));
 }
 
-.easy-email-editor-tabItem {
+.easy-pdf-editor-tabItem {
   position: relative;
   padding: 8px 0px;
   background: transparent;
@@ -23,7 +23,7 @@
   }
 }
 
-.easy-email-editor-tabActiveItem {
+.easy-pdf-editor-tabActiveItem {
   button {
     color: rgb(var(--primary-6, #1890ff));
   }
