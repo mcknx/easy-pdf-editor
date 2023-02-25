@@ -18,7 +18,7 @@ $ yarn add easy-pdf-extensions
 
 ```js
 import React from 'react';
-import { BlockManager, BasicType, AdvancedType } from 'easy-email-core';
+import { BlockManager, BasicType, AdvancedType } from 'easy-pdf-core';
 import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
 import { ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { useWindowSize } from 'react-use';
@@ -175,7 +175,7 @@ export default function App() {
   - You can add or overwrite popover's preset blocks
 
     ```tsx
-    import { BasicType } from 'easy-email-core';
+    import { BasicType } from 'easy-pdf-core';
     import { BlockMarketManager, BlockMaskWrapper } from 'easy-pdf-extensions';
 
     BlockMarketManager.addCategories([

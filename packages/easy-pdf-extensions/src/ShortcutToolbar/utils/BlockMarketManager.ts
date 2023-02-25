@@ -1,4 +1,4 @@
-import { IBlockData } from 'easy-email-core';
+import { IBlockData } from 'easy-pdf-core';
 
 export interface BlockMarketCategory {
   name: string;
@@ -22,7 +22,7 @@ export class BlockMarketManager {
   }
 
   public static unsubscribe(fn: (category: BlockMarketCategory[]) => void) {
-    return this.subscriptHandles = this.subscriptHandles.filter(item => item === fn);
+    return (this.subscriptHandles = this.subscriptHandles.filter(item => item === fn));
   }
 
   public static notify() {
@@ -30,7 +30,7 @@ export class BlockMarketManager {
   }
 
   public static getCategory(name: string) {
-    return this.category.find((item) => item.name === name);
+    return this.category.find(item => item.name === name);
   }
 
   public static getCategories() {
@@ -39,7 +39,7 @@ export class BlockMarketManager {
 
   public static addCategories(list: BlockMarketCategory[]) {
     list.forEach(item => {
-      const index = this.category.findIndex((c) => c.name === item.name);
+      const index = this.category.findIndex(c => c.name === item.name);
       if (index !== -1) {
         this.category.splice(index, 1);
       }
@@ -57,9 +57,9 @@ export class BlockMarketManager {
       title: string;
       description?: React.ReactNode;
       component: () => JSX.Element | null;
-    }[]
+    }[],
   ) {
-    const index = this.category.findIndex((item) => item.name === name);
+    const index = this.category.findIndex(item => item.name === name);
     if (index !== -1) {
       this.category.splice(index, 1);
     }
@@ -75,13 +75,13 @@ export class BlockMarketManager {
 
   public static removeCategories(list: BlockMarketCategory[]) {
     list.forEach(item => {
-      this.category = this.category.filter((c) => c.name !== item.name);
+      this.category = this.category.filter(c => c.name !== item.name);
     });
     this.notify();
   }
 
   public static removeCategory(name: string) {
-    this.category = this.category.filter((item) => item.name !== name);
+    this.category = this.category.filter(item => item.name !== name);
     this.notify();
   }
 }

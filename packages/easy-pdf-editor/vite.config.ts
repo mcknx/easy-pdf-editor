@@ -6,7 +6,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      'easy-email-core': path.resolve('../easy-email-core'),
+      'easy-pdf-core': path.resolve('../easy-pdf-core'),
     },
   },
   define: {},
@@ -30,14 +30,14 @@ export default defineConfig({
         'react-dom/server',
         'mjml-browser',
         'react-final-form',
-        'easy-email-core',
+        'easy-pdf-core',
       ],
       output: {},
     },
     outDir: 'lib',
   },
   optimizeDeps: {
-    include: ['easy-email-core'],
+    include: ['easy-pdf-core'],
   },
   css: {
     modules: {

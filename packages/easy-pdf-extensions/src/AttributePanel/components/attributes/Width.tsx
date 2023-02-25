@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { InputWithUnitField } from '../../../components/Form';
 import { useFocusIdx, useBlock } from 'easy-email-editor';
-import { BasicType, getParentByIdx } from 'easy-email-core';
+import { BasicType, getParentByIdx } from 'easy-pdf-core';
 import { InputWithUnitProps } from '@extensions/components/Form/InputWithUnit';
 import { UseFieldConfig } from 'react-final-form';
 

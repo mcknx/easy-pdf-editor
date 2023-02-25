@@ -5,7 +5,7 @@ import {
   createCustomBlock,
   getPreviewClassName,
   AdvancedType,
-} from 'easy-email-core';
+} from 'easy-pdf-core';
 
 import { CustomBlocksType } from '../constants';
 import React from 'react';

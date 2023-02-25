@@ -17,10 +17,10 @@ export default defineConfig({
       'react-final-form': path.resolve(__dirname, './node_modules/react-final-form'),
       '@demo': path.resolve(__dirname, './src'),
       '@extensions': path.resolve('../packages/easy-pdf-extensions/src'),
-      '@core': path.resolve('../packages/easy-email-core/src'),
+      '@core': path.resolve('../packages/easy-pdf-core/src'),
       '@arco-themes': path.resolve('./node_modules/@arco-themes'),
       '@': path.resolve('../packages/easy-email-editor/src'),
-      'easy-email-core': path.resolve('../packages/easy-email-core/src/index.tsx'),
+      'easy-pdf-core': path.resolve('../packages/easy-pdf-core/src/index.tsx'),
       'easy-pdf-core': path.resolve('../packages/easy-pdf-core/src/index.tsx'),
       'easy-email-editor/lib/locales.json': path.resolve(
         '../packages/easy-email-editor/public/locales.json',

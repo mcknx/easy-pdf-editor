@@ -1,5 +1,5 @@
 import React from 'react';
-import { AdvancedType } from 'easy-email-core';
+import { AdvancedType } from 'easy-pdf-core';
 import { Stack } from 'easy-email-editor';
 
 import { BlockMaskWrapper } from '@extensions/ShortcutToolbar/components/BlockMaskWrapper';
@@ -104,8 +104,7 @@ const list = [
           type: 'text',
           data: {
             value: {
-              content:
-                'Far far away, behind the word mountains, far from the countries',
+              content: 'Far far away, behind the word mountains, far from the countries',
             },
           },
           attributes: {

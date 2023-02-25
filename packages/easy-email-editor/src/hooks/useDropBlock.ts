@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, useRef } from 'react';
 
-import { getNodeIdxFromClassName } from 'easy-email-core';
+import { getNodeIdxFromClassName } from 'easy-pdf-core';
 import { getBlockNodeByChildEle } from '@/utils/getBlockNodeByChildEle';
 import { useBlock } from '@/hooks/useBlock';
 import { getDirectionPosition } from '@/utils/getDirectionPosition';
@@ -27,8 +27,7 @@ export function useDropBlock() {
     cacheDataTransfer.current = dataTransfer;
   }, [dataTransfer]);
   const { setFocusIdx, focusIdx } = useFocusIdx();
-  const { setHoverIdx, setDirection, isDragging, hoverIdx, direction } =
-    useHoverIdx();
+  const { setHoverIdx, setDirection, isDragging, hoverIdx, direction } = useHoverIdx();
 
   useEffect(() => {
     if (ref) {
@@ -139,12 +138,10 @@ export function useDropBlock() {
 
       const onCheckDragLeave = (ev: DragEvent) => {
         const dropEleList = [
-          ...document.querySelectorAll(
-            `[${DATA_ATTRIBUTE_DROP_CONTAINER}="true"]`
-          ),
+          ...document.querySelectorAll(`[${DATA_ATTRIBUTE_DROP_CONTAINER}="true"]`),
         ];
         const target = ev.target as HTMLElement;
-        const isDropContainer = dropEleList.some((ele) => ele.contains(target));
+        const isDropContainer = dropEleList.some(ele => ele.contains(target));
 
         if (!isDropContainer) {
           setDirection('');
@@ -172,14 +169,7 @@ export function useDropBlock() {
         window.removeEventListener('dragover', onCheckDragLeave);
       };
     }
-  }, [
-    autoComplete,
-    cacheDataTransfer,
-    ref,
-    setDataTransfer,
-    setDirection,
-    setHoverIdx,
-  ]);
+  }, [autoComplete, cacheDataTransfer, ref, setDataTransfer, setDirection, setHoverIdx]);
 
   useEffect(() => {
     if (!ref) return;
@@ -219,6 +209,6 @@ export function useDropBlock() {
     () => ({
       setRef,
     }),
-    [setRef]
+    [setRef],
   );
 }

@@ -1,4 +1,4 @@
-import { BasicType, AdvancedType } from 'easy-email-core';
+import { BasicType, AdvancedType } from 'easy-pdf-core';
 import { get } from 'lodash';
 
 const iconsMap = {

@@ -1,4 +1,4 @@
-# Easy-email-core
+# easy-pdf-core
 
 ## Introduction
 
@@ -23,19 +23,19 @@ This is the core easy-email library, composed by the following parts
 ## Usage
 
 ```sh
-$ npm install --save easy-email-core
+$ npm install --save easy-pdf-core
 ```
 
 or
 
 ```sh
-$ yarn add easy-email-core
+$ yarn add easy-pdf-core
 ```
 
 ## transform mjml to json
 
 ```ts
-import { MjmlToJson } from 'easy-email-core';
+import { MjmlToJson } from 'easy-pdf-core';
 
 const json = MjmlToJson(`
 <mjml>
@@ -148,7 +148,7 @@ console.log(json);
 ## transform json to mjml
 
 ```ts
-import { MjmlToJson } from 'easy-email-core';
+import { MjmlToJson } from 'easy-pdf-core';
 
 const xml = JsonToMjml({
   data: json,
@@ -260,7 +260,7 @@ console.log(xml);
 ## parseReactBlockToBlockData
 
 ```tsx
-import { JsonToMjml, components, parseReactBlockToBlockData } from 'easy-email-core';
+import { JsonToMjml, components, parseReactBlockToBlockData } from 'easy-pdf-core';
 
 const { Page, Section, Column, Text, Button } = components;
 
@@ -516,7 +516,7 @@ import {
   JsonToMjml,
   BasicType,
   BlockManager,
-} from 'easy-email-core';
+} from 'easy-pdf-core';
 const { Section, Column, Image, Button } = components;
 
 type IMyFirstBlock = IBlockData<

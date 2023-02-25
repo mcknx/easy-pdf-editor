@@ -1,6 +1,6 @@
 import { camelCase } from 'lodash';
 import React from 'react';
-import { getNodeTypeFromClassName } from 'easy-email-core';
+import { getNodeTypeFromClassName } from 'easy-pdf-core';
 
 const domParser = new DOMParser();
 
@@ -8,12 +8,14 @@ export function getChildSelector(selector: string, index: number) {
   return `${selector}-${index}`;
 }
 
-export function HtmlStringToPreviewReactNodes(
-  content: string,
-) {
+export function HtmlStringToPreviewReactNodes(content: string) {
   let doc = domParser.parseFromString(content, 'text/html'); // The average time is about 1.4 ms
   const reactNode = (
-    <RenderReactNode selector={'0'} node={doc.documentElement} index={0} />
+    <RenderReactNode
+      selector={'0'}
+      node={doc.documentElement}
+      index={0}
+    />
   );
 
   return reactNode;
@@ -28,10 +30,10 @@ const RenderReactNode = React.memo(function ({
   index: number;
   selector: string;
 }): React.ReactElement {
-  const attributes: { [key: string]: string; } = {
+  const attributes: { [key: string]: string } = {
     'data-selector': selector,
   };
-  node.getAttributeNames?.().forEach((att) => {
+  node.getAttributeNames?.().forEach(att => {
     if (att) {
       attributes[att] = node.getAttribute(att) || '';
     }
@@ -74,13 +76,13 @@ const RenderReactNode = React.memo(function ({
         node.childNodes.length === 0
           ? null
           : [...node.childNodes].map((n, i) => (
-            <RenderReactNode
-              selector={getChildSelector(selector, i)}
-              key={i}
-              node={n as any}
-              index={i}
-            />
-          )),
+              <RenderReactNode
+                selector={getChildSelector(selector, i)}
+                key={i}
+                node={n as any}
+                index={i}
+              />
+            )),
     });
 
     return <>{reactNode}</>;

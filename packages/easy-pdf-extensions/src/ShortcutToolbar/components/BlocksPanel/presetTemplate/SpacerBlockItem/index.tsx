@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack, TextStyle } from 'easy-email-editor';
-import { AdvancedType, ISpacer, RecursivePartial } from 'easy-email-core';
+import { AdvancedType, ISpacer, RecursivePartial } from 'easy-pdf-core';
 
 import { BlockMaskWrapper } from '@extensions/ShortcutToolbar/components/BlockMaskWrapper';
 
@@ -25,7 +25,6 @@ export function SpacerBlockItem() {
             >
               <Stack alignment='center'>
                 <Stack.Item fill>
-
                   <div
                     style={{
                       marginBottom: 20,
@@ -35,7 +34,6 @@ export function SpacerBlockItem() {
                       boxShadow: ' 3px 3px 3px rgb(0 0 0 / 0.2)',
                     }}
                   />
-
                 </Stack.Item>
                 <TextStyle>{item} px</TextStyle>
               </Stack>

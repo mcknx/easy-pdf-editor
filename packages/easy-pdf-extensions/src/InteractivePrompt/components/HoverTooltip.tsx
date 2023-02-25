@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-import { getNodeTypeFromClassName, BlockManager } from 'easy-email-core';
+import { getNodeTypeFromClassName, BlockManager } from 'easy-pdf-core';
 import { createPortal } from 'react-dom';
 import {
   getEditorRoot,

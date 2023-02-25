@@ -1,12 +1,17 @@
 import React from 'react';
-import { ColorPickerField, EditTabField, SelectField, TextField } from '@extensions/components/Form';
+import {
+  ColorPickerField,
+  EditTabField,
+  SelectField,
+  TextField,
+} from '@extensions/components/Form';
 import { Align } from '@extensions/AttributePanel/components/attributes/Align';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Collapse, Grid, Space } from '@arco-design/web-react';
 import { IconLink } from '@arco-design/web-react/icon';
 import { NavbarLinkPadding } from '@extensions/AttributePanel/components/attributes/NavbarLinkPadding';
 import { useFocusIdx, Stack } from 'easy-email-editor';
-import { INavbar } from 'easy-email-core';
+import { INavbar } from 'easy-pdf-core';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';
 import {

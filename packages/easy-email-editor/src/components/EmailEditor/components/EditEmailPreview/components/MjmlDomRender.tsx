@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import mjml from 'mjml-browser';
-import { getPageIdx, IPage, JsonToMjml } from 'easy-email-core';
+import { getPageIdx, IPage, JsonToMjml } from 'easy-pdf-core';
 import { cloneDeep, isEqual } from 'lodash';
 import { useEditorContext } from '@/hooks/useEditorContext';
 import { HtmlStringToReactNodes } from '@/utils/HtmlStringToReactNodes';
@@ -54,8 +54,7 @@ export function MjmlDomRender() {
     if (!root) return;
     const onClick = (e: Event) => {
       const isFocusing =
-        getShadowRoot().activeElement?.getAttribute('contenteditable') ===
-        'true';
+        getShadowRoot().activeElement?.getAttribute('contenteditable') === 'true';
       if (isFocusing) {
         setIsTextFocus(true);
       }
@@ -77,7 +76,7 @@ export function MjmlDomRender() {
         context: pageData,
         mode: 'testing',
         dataSource: cloneDeep(mergeTags),
-      })
+      }),
     ).html;
     return renderHtml;
   }, [mergeTags, pageData]);
@@ -85,11 +84,9 @@ export function MjmlDomRender() {
   return useMemo(() => {
     return (
       <div
-        {
-        ...{
-          [DATA_RENDER_COUNT]: count++
-        }
-        }
+        {...{
+          [DATA_RENDER_COUNT]: count++,
+        }}
         data-dashed={dashed}
         ref={setRef}
         style={{
@@ -104,7 +101,7 @@ export function MjmlDomRender() {
             HtmlStringToReactNodes(html, {
               enabledMergeTagsBadge: Boolean(enabledMergeTagsBadge),
             }),
-            ref
+            ref,
           )}
       </div>
     );

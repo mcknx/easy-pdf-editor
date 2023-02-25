@@ -1,4 +1,4 @@
-import { ImageManager } from 'easy-email-core';
+import { ImageManager } from 'easy-pdf-core';
 
 const defaultImagesMap = {
   IMAGE_59:

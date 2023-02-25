@@ -1,4 +1,4 @@
-import { JsonToMjml } from 'easy-email-core';
+import { JsonToMjml } from 'easy-pdf-core';
 import { IEmailTemplate } from 'easy-email-editor';
 import { Message, Modal } from '@arco-design/web-react';
 import React, { useMemo, useState, useCallback } from 'react';

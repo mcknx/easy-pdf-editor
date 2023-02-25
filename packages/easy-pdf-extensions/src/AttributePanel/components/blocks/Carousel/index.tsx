@@ -13,7 +13,7 @@ import { Collapse, Grid, Space } from '@arco-design/web-react';
 import { Stack, useEditorProps, useFocusIdx } from 'easy-email-editor';
 import { AttributesPanelWrapper } from '@extensions/AttributePanel/components/attributes/AttributesPanelWrapper';
 import { Align } from '@extensions/AttributePanel/components/attributes/Align';
-import { ICarousel } from 'easy-email-core';
+import { ICarousel } from 'easy-pdf-core';
 import { ClassName } from '../../attributes/ClassName';
 import { CollapseWrapper } from '../../attributes/CollapseWrapper';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack } from 'easy-email-editor';
-import { AdvancedType } from 'easy-email-core';
+import { AdvancedType } from 'easy-pdf-core';
 
 import { BlockMaskWrapper } from '@extensions/ShortcutToolbar/components/BlockMaskWrapper';
 
@@ -12,13 +12,16 @@ export function TextBlockItem() {
       <Stack vertical>
         {fontList.map((item, index) => {
           return (
-            <Stack.Item fill key={index}>
+            <Stack.Item
+              fill
+              key={index}
+            >
               <BlockMaskWrapper
                 type={AdvancedType.TEXT}
                 payload={{
                   attributes: {
                     'font-size': item + 'px',
-                    padding: '0px 0px 0px 0px'
+                    padding: '0px 0px 0px 0px',
                   },
                   data: {
                     value: {

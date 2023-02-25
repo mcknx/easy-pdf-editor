@@ -4,23 +4,22 @@ import { useBlock } from './useBlock';
 import { getEditorRoot, getShadowRoot } from '@/utils';
 import { useFocusIdx } from './useFocusIdx';
 import { useEditorContext } from './useEditorContext';
-import { getNodeIdxFromClassName } from 'easy-email-core';
+import { getNodeIdxFromClassName } from 'easy-pdf-core';
 import { getBlockNodeByChildEle } from '@/utils/getBlockNodeByChildEle';
 
 function isContentEditFocus() {
   const isShadowRootFocus = document.activeElement === getEditorRoot();
   if (isShadowRootFocus) {
     if (
-      getEditorRoot()?.shadowRoot?.activeElement?.getAttribute(
-        'contenteditable'
-      ) === 'true'
+      getEditorRoot()?.shadowRoot?.activeElement?.getAttribute('contenteditable') ===
+      'true'
     ) {
       return true;
     }
   } else {
     if (
       ['input', 'textarea'].includes(
-        document.activeElement?.tagName.toLocaleLowerCase() || ''
+        document.activeElement?.tagName.toLocaleLowerCase() || '',
       ) ||
       document.activeElement?.getAttribute('contenteditable') === 'true'
     ) {

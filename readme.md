@@ -75,18 +75,18 @@ If you like this project, please consider donating.
 ## Getting started
 
 ```sh
-$ npm install --save easy-email-core easy-email-editor easy-pdf-extensions react-final-form
+$ npm install --save easy-pdf-core easy-email-editor easy-pdf-extensions react-final-form
 ```
 
 or
 
 ```sh
-$ yarn add easy-email-core easy-email-editor easy-pdf-extensions react-final-form
+$ yarn add easy-pdf-core easy-email-editor easy-pdf-extensions react-final-form
 ```
 
 ```js
 import React from 'react';
-import { BlockManager, BasicType, AdvancedType } from 'easy-email-core';
+import { BlockManager, BasicType, AdvancedType } from 'easy-pdf-core';
 import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
 import { ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { useWindowSize } from 'react-use';
@@ -168,7 +168,7 @@ export default function App() {
 
 ## Packages
 
-- [easy-email-core](./packages/easy-email-core/readme.md)
+- [easy-pdf-core](./packages/easy-pdf-core/readme.md)
 - [easy-email-editor](./packages/easy-email-editor/readme.md)
 - [easy-pdf-extensions](./packages/easy-pdf-extensions/readme.md)
 

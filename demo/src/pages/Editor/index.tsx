@@ -29,7 +29,7 @@ import { FormApi } from 'final-form';
 import { UserStorage } from '@demo/utils/user-storage';
 
 import { useCollection } from './components/useCollection';
-import { AdvancedType, BasicType, IBlockData, JsonToMjml } from 'easy-email-core';
+import { AdvancedType, BasicType, IBlockData, JsonToMjml } from 'easy-pdf-core';
 import { BlockMarketManager, ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmail';
 

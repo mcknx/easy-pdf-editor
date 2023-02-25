@@ -1,14 +1,14 @@
-import { IBlockData, BlockManager, getParentIdx } from 'easy-email-core';
+import { IBlockData, BlockManager, getParentIdx } from 'easy-pdf-core';
 import { get, cloneDeep } from 'lodash';
 
 export function getContextMergeTags(
   mergeTags: { [key: string]: any },
   context: { [key: string]: any },
-  idx: string
+  idx: string,
 ) {
   const loop = (
     currentIdx: string,
-    combineMergeTags: { [key: string]: any }
+    combineMergeTags: { [key: string]: any },
   ): { [key: string]: any } => {
     const parentBlockData = get(context, currentIdx) as IBlockData | undefined;
     if (!parentBlockData) return combineMergeTags;
@@ -19,30 +19,25 @@ export function getContextMergeTags(
       const dataSource = parentBlockData.data?.value?.dataSource;
       if (!dataSource) return combineMergeTags;
 
-      Object.keys(dataSource).forEach((key) => {
+      Object.keys(dataSource).forEach(key => {
         let formatKey: string = dataSource[key];
 
         const loopFormatKey = (currentLoopKeyIdx: string) => {
           const currentParentIdx = getParentIdx(currentLoopKeyIdx);
           if (currentParentIdx) {
-            const currentBlockData = get(
-              context,
-              currentParentIdx
-            ) as IBlockData;
+            const currentBlockData = get(context, currentParentIdx) as IBlockData;
 
             if (!currentBlockData) return formatKey;
             currentBlockData.data.value.dataSource &&
-              Object.keys(currentBlockData.data.value.dataSource).forEach(
-                (item) => {
-                  formatKey = formatKey.replace(
-                    item,
-                    currentBlockData.data.value.dataSource[item].replace(
-                      /{{([^}}]+)}}/g,
-                      '$1'
-                    )
-                  );
-                }
-              );
+              Object.keys(currentBlockData.data.value.dataSource).forEach(item => {
+                formatKey = formatKey.replace(
+                  item,
+                  currentBlockData.data.value.dataSource[item].replace(
+                    /{{([^}}]+)}}/g,
+                    '$1',
+                  ),
+                );
+              });
 
             loopFormatKey(currentParentIdx);
           }

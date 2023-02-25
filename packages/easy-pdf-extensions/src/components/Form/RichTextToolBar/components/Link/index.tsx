@@ -4,7 +4,7 @@ import { Form } from 'react-final-form';
 import { IconFont, Stack, TextStyle } from 'easy-email-editor';
 import { SearchField, SwitchField } from '@extensions/components/Form';
 import { ToolItem } from '../ToolItem';
-import { EMAIL_BLOCK_CLASS_NAME } from 'easy-email-core';
+import { EMAIL_BLOCK_CLASS_NAME } from 'easy-pdf-core';
 
 export interface LinkParams {
   link: string;
@@ -18,21 +18,18 @@ export interface LinkProps extends PopoverProps {
   onChange: (val: LinkParams) => void;
 }
 
-function getAnchorElement(
-  node: Node | null,
-): HTMLAnchorElement | null {
+function getAnchorElement(node: Node | null): HTMLAnchorElement | null {
   if (!node) return null;
   if (node instanceof HTMLAnchorElement) {
     return node;
   }
-  if (node instanceof Element && node.classList.contains(EMAIL_BLOCK_CLASS_NAME)) return null;
+  if (node instanceof Element && node.classList.contains(EMAIL_BLOCK_CLASS_NAME))
+    return null;
 
   return getAnchorElement(node.parentNode);
 }
 
-function getLinkNode(
-  currentRange: Range | null | undefined
-): HTMLAnchorElement | null {
+function getLinkNode(currentRange: Range | null | undefined): HTMLAnchorElement | null {
   let linkNode: HTMLAnchorElement | null = null;
   if (!currentRange) return null;
   linkNode = getAnchorElement(currentRange.startContainer);
@@ -40,7 +37,6 @@ function getLinkNode(
 }
 
 export function Link(props: LinkProps) {
-
   const initialValues = useMemo((): LinkParams => {
     let link = '';
     let blank = true;
@@ -63,7 +59,7 @@ export function Link(props: LinkProps) {
     (values: LinkParams) => {
       props.onChange(values);
     },
-    [props]
+    [props],
   );
 
   return (
@@ -80,9 +76,12 @@ export function Link(props: LinkProps) {
             trigger='click'
             color='#fff'
             position='tl'
-            content={(
+            content={
               <div style={{ color: '#333' }}>
-                <Stack vertical spacing='none'>
+                <Stack
+                  vertical
+                  spacing='none'
+                >
                   <SearchField
                     size='small'
                     name='link'
@@ -95,7 +94,10 @@ export function Link(props: LinkProps) {
                 </Stack>
                 <Grid.Row>
                   <Grid.Col span={12}>
-                    <Space align='center' size='mini'>
+                    <Space
+                      align='center'
+                      size='mini'
+                    >
                       <TextStyle size='smallest'>{t('Target')}</TextStyle>
                       <SwitchField
                         size='small'
@@ -109,7 +111,10 @@ export function Link(props: LinkProps) {
                     </Space>
                   </Grid.Col>
                   <Grid.Col span={12}>
-                    <Space align='center' size='mini'>
+                    <Space
+                      align='center'
+                      size='mini'
+                    >
                       <TextStyle size='smallest'>{t('Underline')}</TextStyle>
                       <SwitchField
                         size='small'
@@ -124,9 +129,13 @@ export function Link(props: LinkProps) {
                   </Grid.Col>
                 </Grid.Row>
               </div>
-            )}
+            }
           >
-            <ToolItem isActive={Boolean(initialValues.link)} title={t('Link')} icon={<IconFont iconName='icon-link' />} />
+            <ToolItem
+              isActive={Boolean(initialValues.link)}
+              title={t('Link')}
+              icon={<IconFont iconName='icon-link' />}
+            />
           </Tooltip>
         );
       }}

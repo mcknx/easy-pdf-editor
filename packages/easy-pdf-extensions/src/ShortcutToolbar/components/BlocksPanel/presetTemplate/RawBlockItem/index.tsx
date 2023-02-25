@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack } from 'easy-email-editor';
-import { BasicType } from 'easy-email-core';
+import { BasicType } from 'easy-pdf-core';
 
 import { BlockMaskWrapper } from '@extensions/ShortcutToolbar/components/BlockMaskWrapper';
 
@@ -10,7 +10,7 @@ const list = [
       type: BasicType.RAW,
       data: {
         value: {
-          content: '<% if (user) { %>'
+          content: '<% if (user) { %>',
         },
       },
     },
@@ -20,7 +20,7 @@ const list = [
       type: BasicType.RAW,
       data: {
         value: {
-          content: '<% } %>'
+          content: '<% } %>',
         },
       },
     },
@@ -38,11 +38,9 @@ export function RawBlockItem() {
               type={BasicType.RAW}
               payload={item.payload}
             >
-
               <div style={{ width: '100%', paddingLeft: 20 }}>
                 {item.payload.data.value.content}
               </div>
-
             </BlockMaskWrapper>
           );
         })}

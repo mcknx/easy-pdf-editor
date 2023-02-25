@@ -1,5 +1,5 @@
 import { IconFont } from 'easy-email-editor';
-import { BasicType } from 'easy-email-core';
+import { BasicType } from 'easy-pdf-core';
 import React from 'react';
 import { IBlockDataWithId } from '../..';
 
@@ -22,12 +22,12 @@ export function EyeIcon({
 
   return blockData.data.hidden ? (
     <IconFont
-      onClick={(ev) => onToggleVisible(blockData, ev)}
+      onClick={ev => onToggleVisible(blockData, ev)}
       iconName='icon-eye-invisible'
     />
   ) : (
     <IconFont
-      onClick={(ev) => onToggleVisible(blockData, ev)}
+      onClick={ev => onToggleVisible(blockData, ev)}
       iconName='icon-eye'
     />
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BasicType } from 'easy-email-core';
+import { BasicType } from 'easy-pdf-core';
 import { createPortal } from 'react-dom';
 import {
   IconFont,

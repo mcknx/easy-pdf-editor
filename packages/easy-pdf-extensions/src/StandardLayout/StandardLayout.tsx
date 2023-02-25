@@ -7,8 +7,11 @@ import enUS from '@arco-design/web-react/es/locale/en-US';
 import { MergeTagBadgePrompt } from '@extensions/MergeTagBadgePrompt';
 import { EditPanel } from '../EditPanel';
 import { ConfigurationPanel } from '@extensions/ConfigurationPanel';
-import { ExtensionProps, ExtensionProvider } from '@extensions/components/Providers/ExtensionProvider';
-import { AdvancedType } from 'easy-email-core';
+import {
+  ExtensionProps,
+  ExtensionProvider,
+} from '@extensions/components/Providers/ExtensionProvider';
+import { AdvancedType } from 'easy-pdf-core';
 
 const defaultCategories: ExtensionProps['categories'] = [
   {

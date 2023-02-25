@@ -1,4 +1,9 @@
-import { getParentIdx, getIndexByIdx, BlockManager, getNodeIdxFromClassName } from 'easy-email-core';
+import {
+  getParentIdx,
+  getIndexByIdx,
+  BlockManager,
+  getNodeIdxFromClassName,
+} from 'easy-pdf-core';
 import { useCallback, useEffect, useState } from 'react';
 import {
   getBlockNodeByChildEle,
@@ -34,19 +39,19 @@ export function useAvatarWrapperDrop() {
     if (!blockLayerRef) return;
     blockLayerRef
       .querySelectorAll(
-        '.arco-tree-node-title-gap-top, .arco-tree-node-title-gap-bottom, .arco-tree-node-title-highlight'
+        '.arco-tree-node-title-gap-top, .arco-tree-node-title-gap-bottom, .arco-tree-node-title-highlight',
       )
-      .forEach((item) => {
+      .forEach(item => {
         item.classList.remove(
           'arco-tree-node-title-gap-top',
           'arco-tree-node-title-gap-bottom',
-          'arco-tree-node-title-highlight'
+          'arco-tree-node-title-highlight',
         );
       });
   }, [blockLayerRef]);
 
   const allowDrop: BlockTreeProps<IBlockDataWithId>['allowDrop'] = useCallback(
-    (params) => {
+    params => {
       const { dragNode, dropNode, dropPosition } = params;
       let dragType;
       if (isKeyObject(dragNode)) {
@@ -61,10 +66,7 @@ export function useAvatarWrapperDrop() {
 
       if (dropPosition === 0) {
         if (
-          BlockManager.getAutoCompletePath(
-            dragBlock.type,
-            dropNode.dataRef.type
-          ) &&
+          BlockManager.getAutoCompletePath(dragBlock.type, dropNode.dataRef.type) &&
           dropNode.dataRef.children.length === 0
         ) {
           return {
@@ -82,10 +84,7 @@ export function useAvatarWrapperDrop() {
           };
         }
       } else {
-        if (
-          dropNode.parent &&
-          dragBlock.validParentType.includes(dropNode.parent.type)
-        ) {
+        if (dropNode.parent && dragBlock.validParentType.includes(dropNode.parent.type)) {
           return {
             position: dropPosition,
             key: dropNode.key,
@@ -96,7 +95,7 @@ export function useAvatarWrapperDrop() {
       setHoverIdx('');
       return false;
     },
-    [setDirection, setHoverIdx, valuesRef]
+    [setDirection, setHoverIdx, valuesRef],
   );
 
   useEffect(() => {
@@ -108,8 +107,7 @@ export function useAvatarWrapperDrop() {
         if (!blockNode || !ev.target) return;
 
         const directionPosition = getDirectionPosition(ev, 5);
-        const treeNodeEle = blockNode.parentNode?.parentNode
-          ?.parentNode as HTMLElement;
+        const treeNodeEle = blockNode.parentNode?.parentNode?.parentNode as HTMLElement;
 
         if (!treeNodeEle) return;
 
@@ -149,9 +147,8 @@ export function useAvatarWrapperDrop() {
         });
         if (!dropResult) return;
 
-        const node = document.querySelector(
-          `[data-tree-idx="${dropResult.key}"]`
-        )?.parentNode?.parentNode;
+        const node = document.querySelector(`[data-tree-idx="${dropResult.key}"]`)
+          ?.parentNode?.parentNode;
         if (node instanceof HTMLElement) {
           removeHightLightClassName();
           node.classList.add('arco-tree-node-title-gap-bottom');

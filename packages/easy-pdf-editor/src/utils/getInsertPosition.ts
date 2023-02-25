@@ -9,7 +9,7 @@ import {
   getParentByIdx,
   BasicType,
   AdvancedType,
-} from 'easy-email-core';
+} from 'easy-pdf-core';
 import { DirectionPosition } from './getDirectionPosition';
 
 interface Params {
@@ -42,8 +42,7 @@ export function getInsertPosition(params: Params) {
   if (directlyParent) {
     if (directionPosition.vertical.isEdge) {
       const isTop =
-        directionPosition.vertical.direction === 'top' &&
-        getIndexByIdx(idx) === 0;
+        directionPosition.vertical.direction === 'top' && getIndexByIdx(idx) === 0;
       const isBottom =
         directionPosition.vertical.direction === 'bottom' &&
         getIndexByIdx(idx) === directlyParent.children.length - 1;
@@ -91,7 +90,7 @@ export function getInsertPosition(params: Params) {
     context,
     idx,
     parentData.parent.type,
-    directionPosition
+    directionPosition,
   );
 
   return insertData;
@@ -101,7 +100,7 @@ function getInsetParentAndIndex(
   context: { content: IPage },
   idx: string,
   type: string,
-  directionPosition: DirectionPosition
+  directionPosition: DirectionPosition,
 ): {
   parentIdx: string;
   insertIndex: number;
@@ -116,7 +115,7 @@ function getInsetParentAndIndex(
     if (parent && parent.type === type) {
       const { direction, valid, isEdge } = getValidDirection(
         parent.type,
-        directionPosition
+        directionPosition,
       );
 
       if (!valid) return null;
@@ -125,9 +124,7 @@ function getInsetParentAndIndex(
       if (isVertical && parent.children.length > 0) {
         const isTop = directionPosition.vertical.direction === 'top';
         return {
-          insertIndex: isTop
-            ? getIndexByIdx(parentIdx)
-            : getIndexByIdx(parentIdx) + 1,
+          insertIndex: isTop ? getIndexByIdx(parentIdx) : getIndexByIdx(parentIdx) + 1,
           parentIdx: getParentIdx(parentIdx)!,
           endDirection: directionPosition.vertical.direction,
           hoverIdx: parentIdx,
@@ -142,10 +139,7 @@ function getInsetParentAndIndex(
         const siblingIndex = getIndexByIdx(prevIdx);
         hoverIdx = getChildIdx(parentIdx, siblingIndex);
 
-        if (
-          parent.children.length > 0 &&
-          /(right)|(bottom)/.test(endDirection)
-        ) {
+        if (parent.children.length > 0 && /(right)|(bottom)/.test(endDirection)) {
           insertIndex = siblingIndex + 1;
         } else {
           insertIndex = siblingIndex;
@@ -204,7 +198,7 @@ function getInsetParentAndIndex(
 
 function getValidDirection(
   targetType: string,
-  directionPosition: DirectionPosition
+  directionPosition: DirectionPosition,
 ): { valid: boolean; direction: string; isEdge: boolean } {
   const isVertical = verticalBlocks.includes(targetType);
 

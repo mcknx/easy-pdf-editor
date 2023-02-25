@@ -116,7 +116,7 @@ import {
   getPreviewClassName,
   AdvancedType,
   MjmlToJson,
-} from 'easy-email-core';
+} from 'easy-pdf-core';
 
 const { BlockRenderer } = components;
 
@@ -160,7 +160,7 @@ BlocksMap.registerBlocks({ 'block-name': YourCustomBlock });
 ## Dynamic rendering
 
 ```tsx
-import { IBlockData, BasicType, components, createCustomBlock } from 'easy-email-core';
+import { IBlockData, BasicType, components, createCustomBlock } from 'easy-pdf-core';
 
 import { CustomBlocksType } from '../constants';
 import React from 'react';

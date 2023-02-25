@@ -1,4 +1,4 @@
-import { BlockManager } from 'easy-email-core';
+import { BlockManager } from 'easy-pdf-core';
 import { BlockAttributeConfigurationManager } from 'easy-pdf-extensions';
 import { CustomBlocksType } from './constants';
 import {

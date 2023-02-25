@@ -1,18 +1,22 @@
 import { Button, Drawer } from '@arco-design/web-react';
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
-import { BasicType, IText } from 'easy-email-core';
-import { Stack, TextStyle, useBlock, useEditorContext, useFocusIdx } from 'easy-email-editor';
+import { BasicType, IText } from 'easy-pdf-core';
+import {
+  Stack,
+  TextStyle,
+  useBlock,
+  useEditorContext,
+  useFocusIdx,
+} from 'easy-email-editor';
 import { ShadowDom } from '@extensions/components/ShadowDom';
 
-const CodeMirrorEditorPromise = import(
-  '../../../components/Form/CodemirrorEditor'
-);
+const CodeMirrorEditorPromise = import('../../../components/Form/CodemirrorEditor');
 const CodeMirrorEditor = React.lazy(() => CodeMirrorEditorPromise);
 
 export const HtmlEditor: React.FC<{
   visible: boolean;
   setVisible: (v: boolean) => void;
-}> = (props) => {
+}> = props => {
   const { visible, setVisible } = props;
 
   const { focusBlock, setValueByIdx } = useBlock();
@@ -44,10 +48,8 @@ export const HtmlEditor: React.FC<{
     return {
       color: attributes.color || pageData.data.value['text-color'],
       fontSize: attributes['font-size'] || pageData.data.value['font-size'],
-      fontFamily:
-        attributes['font-family'] || pageData.data.value['font-family'],
-      fontWeight:
-        attributes['font-weight'] || pageData.data.value['font-weight'],
+      fontFamily: attributes['font-family'] || pageData.data.value['font-family'],
+      fontWeight: attributes['font-weight'] || pageData.data.value['font-weight'],
       backgroundColor: attributes['container-background-color'],
       padding: attributes.padding,
     };
@@ -57,18 +59,24 @@ export const HtmlEditor: React.FC<{
     <Drawer
       placement='left'
       headerStyle={{ display: 'block', lineHeight: '48px' }}
-      title={(
+      title={
         <Stack distribution='equalSpacing'>
-          <TextStyle variation='strong' size='large'>
+          <TextStyle
+            variation='strong'
+            size='large'
+          >
             {t('Html')}
           </TextStyle>
           <Stack>
-            <Button type='primary' onClick={onSave}>
+            <Button
+              type='primary'
+              onClick={onSave}
+            >
               {t('Save')}
             </Button>
           </Stack>
         </Stack>
-      )}
+      }
       closable={false}
       escToExit={false}
       width='100vw'
@@ -79,7 +87,7 @@ export const HtmlEditor: React.FC<{
       <div style={{ display: 'flex', height: '100%' }}>
         <div style={{ flex: 1, height: '100%' }}>
           <Suspense
-            fallback={(
+            fallback={
               <div
                 style={{
                   height: '100%',
@@ -94,14 +102,15 @@ export const HtmlEditor: React.FC<{
               >
                 {t('Editor Loading...')}
               </div>
-            )}
+            }
           >
-            <CodeMirrorEditor value={content} onChange={setContent} />
+            <CodeMirrorEditor
+              value={content}
+              onChange={setContent}
+            />
           </Suspense>
         </div>
-        <div
-          style={{ flex: 1, height: '100%', overflow: 'auto', marginRight: 10 }}
-        >
+        <div style={{ flex: 1, height: '100%', overflow: 'auto', marginRight: 10 }}>
           <ShadowDom
             style={{
               ...styles,

@@ -5,7 +5,7 @@ import { TextField } from '.';
 import { Button } from '@arco-design/web-react';
 import { Stack, TextStyle, useBlock, useFocusIdx } from 'easy-email-editor';
 import { Help } from '@extensions/AttributePanel/components/UI/Help';
-import { IPage } from 'easy-email-core';
+import { IPage } from 'easy-pdf-core';
 
 export function AddFont() {
   const { focusBlock } = useBlock();

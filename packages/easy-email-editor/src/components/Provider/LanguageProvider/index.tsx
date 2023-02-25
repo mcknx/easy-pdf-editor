@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { I18nManager, t } from 'easy-email-core';
+import { I18nManager, t } from 'easy-pdf-core';
 
 export const LanguageProvider: React.FC<{ locale?: Record<string, string> }> = props => {
   const [count, setCount] = useState(0);

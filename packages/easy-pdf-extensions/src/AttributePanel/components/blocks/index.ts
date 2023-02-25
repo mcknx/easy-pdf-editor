@@ -19,7 +19,7 @@ import { Hero } from './Hero';
 import { Navbar } from './Navbar';
 import { Social } from './Social';
 import { Table } from './Table';
-import { BasicType, AdvancedType } from 'easy-email-core';
+import { BasicType, AdvancedType } from 'easy-pdf-core';
 
 export const blocks = {
   [BasicType.PAGE]: Page,
