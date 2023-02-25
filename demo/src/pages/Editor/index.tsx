@@ -50,7 +50,7 @@ import { useMergeTagsModal } from './components/useMergeTagsModal';
 
 import { useWindowSize } from 'react-use';
 import { CustomBlocksType } from './components/CustomBlocks/constants';
-import localesData from 'easy-email-localization/locales/locales.json';
+import localesData from 'easy-pdf-localization/locales/locales.json';
 
 console.log(localesData);
 

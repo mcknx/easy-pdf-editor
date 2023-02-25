@@ -25,7 +25,7 @@ export default defineConfig({
       'easy-email-editor/lib/locales.json': path.resolve(
         '../packages/easy-email-editor/public/locales.json',
       ),
-      'easy-email-localization': path.resolve('../packages/easy-email-localization'),
+      'easy-pdf-localization': path.resolve('../packages/easy-pdf-localization'),
       'easy-email-editor': path.resolve('../packages/easy-email-editor/src/index.tsx'),
       'easy-email-extensions': path.resolve(
         '../packages/easy-email-extensions/src/index.tsx',
