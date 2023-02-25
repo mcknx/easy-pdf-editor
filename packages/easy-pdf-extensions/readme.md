@@ -1,4 +1,4 @@
-# Easy-email-extensions
+# easy-pdf-extensions
 
 ## Introduction
 
@@ -7,24 +7,24 @@ Provide default UI components, when they don’t meet your needs, you can refer 
 ## usage
 
 ```sh
-$ npm install --save easy-email-extensions
+$ npm install --save easy-pdf-extensions
 ```
 
 or
 
 ```sh
-$ yarn add easy-email-extensions
+$ yarn add easy-pdf-extensions
 ```
 
 ```js
 import React from 'react';
 import { BlockManager, BasicType, AdvancedType } from 'easy-email-core';
 import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
-import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
+import { ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { useWindowSize } from 'react-use';
 
 import 'easy-email-editor/lib/style.css';
-import 'easy-email-extensions/lib/style.css';
+import 'easy-pdf-extensions/lib/style.css';
 
 const categories: ExtensionProps['categories'] = [
   {
@@ -135,7 +135,7 @@ export default function App() {
   - You can add or overwrite
 
     ```tsx
-    import { BlockAttributeConfigurationManager } from 'easy-email-extensions';
+    import { BlockAttributeConfigurationManager } from 'easy-pdf-extensions';
 
     BlockAttributeConfigurationManager.add({
       [BasicType.TEXT]: () => <div>will be overwrite `Text`</div>,
@@ -176,7 +176,7 @@ export default function App() {
 
     ```tsx
     import { BasicType } from 'easy-email-core';
-    import { BlockMarketManager, BlockMaskWrapper } from 'easy-email-extensions';
+    import { BlockMarketManager, BlockMaskWrapper } from 'easy-pdf-extensions';
 
     BlockMarketManager.addCategories([
       {

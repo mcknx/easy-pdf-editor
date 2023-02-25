@@ -10,7 +10,7 @@ import { Form } from 'react-final-form';
 import { useLoading } from '@demo/hooks/useLoading';
 import { pushEvent } from '@demo/utils/pushEvent';
 import mustache from 'mustache';
-import { TextAreaField, TextField } from 'easy-email-extensions';
+import { TextAreaField, TextField } from 'easy-pdf-extensions';
 
 const schema = Yup.object().shape({
   toEmail: Yup.string().email('Unvalid email').required('Email required'),
@@ -62,10 +62,10 @@ export function useEmailModal() {
             closeModal();
             Message.success('Email send!');
           },
-        })
+        }),
       );
     },
-    [dispatch, emailData]
+    [dispatch, emailData],
   );
 
   const openModal = (value: IEmailTemplate, mergeTags: any) => {
@@ -100,7 +100,11 @@ export function useEmailModal() {
             onOk={() => handleSubmit()}
             onCancel={closeModal}
           >
-            <TextField autoFocus name='toEmail' label='To email' />
+            <TextField
+              autoFocus
+              name='toEmail'
+              label='To email'
+            />
             <TextAreaField
               rows={15}
               autoFocus

@@ -12,11 +12,11 @@ export default defineConfig({
   resolve: {
     alias: {
       'easy-email-editor/lib/style.css': path.resolve(__dirname, 'package.json'), // 没有用的，只是防止css 404报错
-      'easy-email-extensions/lib/style.css': path.resolve(__dirname, 'package.json'), // 没有用的，只是防止css 404报错
+      'easy-pdf-extensions/lib/style.css': path.resolve(__dirname, 'package.json'), // 没有用的，只是防止css 404报错
       react: path.resolve('./node_modules/react'),
       'react-final-form': path.resolve(__dirname, './node_modules/react-final-form'),
       '@demo': path.resolve(__dirname, './src'),
-      '@extensions': path.resolve('../packages/easy-email-extensions/src'),
+      '@extensions': path.resolve('../packages/easy-pdf-extensions/src'),
       '@core': path.resolve('../packages/easy-email-core/src'),
       '@arco-themes': path.resolve('./node_modules/@arco-themes'),
       '@': path.resolve('../packages/easy-email-editor/src'),
@@ -27,8 +27,8 @@ export default defineConfig({
       ),
       'easy-pdf-localization': path.resolve('../packages/easy-pdf-localization'),
       'easy-email-editor': path.resolve('../packages/easy-email-editor/src/index.tsx'),
-      'easy-email-extensions': path.resolve(
-        '../packages/easy-email-extensions/src/index.tsx',
+      'easy-pdf-extensions': path.resolve(
+        '../packages/easy-pdf-extensions/src/index.tsx',
       ),
       '@arco-design/web-react/dist/css/arco.css': path.resolve(
         './node_modules/@arco-design/web-react/dist/css/arco.css',

@@ -2,7 +2,7 @@ import { Picture } from '@demo/components/Picture';
 import { Message } from '@arco-design/web-react';
 import { IBlockData } from 'easy-email-core';
 import { CollectedBlock, IconFont } from 'easy-email-editor';
-import { BlockMarketCategory, BlockMaskWrapper } from 'easy-email-extensions';
+import { BlockMarketCategory, BlockMaskWrapper } from 'easy-pdf-extensions';
 
 import React, { useCallback, useMemo } from 'react';
 import { useLocalStorage } from 'react-use';
@@ -24,10 +24,7 @@ const defaultData = [
 ];
 
 export function useCollection() {
-  const [collection, setCollection] = useLocalStorage(
-    COLLECTION_KEY,
-    defaultData
-  );
+  const [collection, setCollection] = useLocalStorage(COLLECTION_KEY, defaultData);
 
   const addCollection = useCallback(
     (payload: CollectedBlock) => {
@@ -43,25 +40,23 @@ export function useCollection() {
       setCollection([...collection]);
       Message.success('Added to collection!');
     },
-    [collection, setCollection]
+    [collection, setCollection],
   );
 
   const removeCollection = useCallback(
     (id: string) => {
       if (!collection) return;
 
-      collection[0].blocks = collection[0].blocks.filter(
-        (item) => item.id !== id
-      );
+      collection[0].blocks = collection[0].blocks.filter(item => item.id !== id);
       setCollection([...collection]);
       Message.success('Remove collection');
     },
-    [collection, setCollection]
+    [collection, setCollection],
   );
 
   const collectionCategory = useMemo((): BlockMarketCategory | null => {
     if (!collection) return null;
-    const blockComponents = collection[0].blocks.map((item) => ({
+    const blockComponents = collection[0].blocks.map(item => ({
       id: item.id,
       type: item.data.type,
       title: item.title,

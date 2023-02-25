@@ -33,10 +33,10 @@ export function FontFamily(props: FontFamilyProps) {
       trigger='click'
       color='#fff'
       position='left'
-      className='easy-email-extensions-Tools-Popover'
+      className='easy-pdf-extensions-Tools-Popover'
       popupVisible={visible}
       onVisibleChange={onVisibleChange}
-      content={(
+      content={
         <>
           <style>{styleText}</style>
           <div
@@ -63,7 +63,7 @@ export function FontFamily(props: FontFamilyProps) {
             </Menu>
           </div>
         </>
-      )}
+      }
       getPopupContainer={props.getPopupContainer}
     >
       <ToolItem

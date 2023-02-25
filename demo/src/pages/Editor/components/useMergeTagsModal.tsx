@@ -1,33 +1,27 @@
 import { Message, Modal } from '@arco-design/web-react';
 import React, { useMemo, useState } from 'react';
 import { Form } from 'react-final-form';
-import { TextAreaField } from 'easy-email-extensions';
+import { TextAreaField } from 'easy-pdf-extensions';
 import { Config } from 'final-form';
 
 export function useMergeTagsModal(defaultMergeTags: Record<string, any>) {
   const [visible, setVisible] = useState(false);
   const [mergeTags, setMergeTags] = useState<any>(defaultMergeTags);
 
-
-
   const openModal = () => {
-
     setVisible(true);
   };
   const closeModal = () => {
-
     setVisible(false);
   };
 
-  const onSubmit: Config<any, { mergeTags: string; }>['onSubmit'] = (values) => {
-
+  const onSubmit: Config<any, { mergeTags: string }>['onSubmit'] = values => {
     try {
       setMergeTags(JSON.parse(values.mergeTags));
       closeModal();
     } catch (error: any) {
       Message.warning(error?.message || error);
     }
-
   };
 
   const modal = useMemo(() => {
@@ -40,7 +34,6 @@ export function useMergeTagsModal(defaultMergeTags: Record<string, any>) {
       >
         {({ handleSubmit }) => (
           <Modal
-
             style={{ zIndex: 9999, width: '80vw', height: '80vh' }}
             title='Merge tags'
             okText='Save'
@@ -66,6 +59,6 @@ export function useMergeTagsModal(defaultMergeTags: Record<string, any>) {
     modal,
     openModal,
     mergeTags,
-    setMergeTags
+    setMergeTags,
   };
 }

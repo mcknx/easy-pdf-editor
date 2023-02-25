@@ -62,10 +62,10 @@ export function FontSize(props: FontSizeProps) {
       trigger='click'
       color='#fff'
       position='left'
-      className='easy-email-extensions-Tools-Popover'
+      className='easy-pdf-extensions-Tools-Popover'
       popupVisible={visible}
       onVisibleChange={onVisibleChange}
-      content={(
+      content={
         <>
           <style>{styleText}</style>
           <div
@@ -92,7 +92,7 @@ export function FontSize(props: FontSizeProps) {
             </Menu>
           </div>
         </>
-      )}
+      }
       getPopupContainer={props.getPopupContainer}
     >
       <ToolItem

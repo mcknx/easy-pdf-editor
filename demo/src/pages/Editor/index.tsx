@@ -30,18 +30,14 @@ import { UserStorage } from '@demo/utils/user-storage';
 
 import { useCollection } from './components/useCollection';
 import { AdvancedType, BasicType, IBlockData, JsonToMjml } from 'easy-email-core';
-import {
-  BlockMarketManager,
-  ExtensionProps,
-  StandardLayout,
-} from 'easy-email-extensions';
+import { BlockMarketManager, ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { AutoSaveAndRestoreEmail } from '@demo/components/AutoSaveAndRestoreEmail';
 
 // Register external blocks
 import './components/CustomBlocks';
 
 import 'easy-email-editor/lib/style.css';
-import 'easy-email-extensions/lib/style.css';
+import 'easy-pdf-extensions/lib/style.css';
 import blueTheme from '@arco-themes/react-easy-email-theme/css/arco.css?inline';
 import purpleTheme from '@arco-themes/react-easy-email-theme-purple/css/arco.css?inline';
 import greenTheme from '@arco-themes/react-easy-email-theme-green/css/arco.css?inline';

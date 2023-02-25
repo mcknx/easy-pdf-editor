@@ -32,7 +32,6 @@
   <img src="./join_discord.png" width="240">
 </a>
 
-
 ## Introduction
 
 Easy email is developed based on the [MJML](https://mjml.io/) and has very good compatibility. At the same time, it can generate code through drag-and-drop editing.
@@ -76,24 +75,24 @@ If you like this project, please consider donating.
 ## Getting started
 
 ```sh
-$ npm install --save easy-email-core easy-email-editor easy-email-extensions react-final-form
+$ npm install --save easy-email-core easy-email-editor easy-pdf-extensions react-final-form
 ```
 
 or
 
 ```sh
-$ yarn add easy-email-core easy-email-editor easy-email-extensions react-final-form
+$ yarn add easy-email-core easy-email-editor easy-pdf-extensions react-final-form
 ```
 
 ```js
 import React from 'react';
 import { BlockManager, BasicType, AdvancedType } from 'easy-email-core';
 import { EmailEditor, EmailEditorProvider } from 'easy-email-editor';
-import { ExtensionProps, StandardLayout } from 'easy-email-extensions';
+import { ExtensionProps, StandardLayout } from 'easy-pdf-extensions';
 import { useWindowSize } from 'react-use';
 
 import 'easy-email-editor/lib/style.css';
-import 'easy-email-extensions/lib/style.css';
+import 'easy-pdf-extensions/lib/style.css';
 
 // theme, If you need to change the theme, you can make a duplicate in https://arco.design/themes/design/1799/setting/base/Color
 import '@arco-themes/react-easy-email-theme/css/arco.css';
@@ -171,7 +170,7 @@ export default function App() {
 
 - [easy-email-core](./packages/easy-email-core/readme.md)
 - [easy-email-editor](./packages/easy-email-editor/readme.md)
-- [easy-email-extensions](./packages/easy-email-extensions/readme.md)
+- [easy-pdf-extensions](./packages/easy-pdf-extensions/readme.md)
 
 </br>
 
@@ -180,7 +179,7 @@ export default function App() {
 ```sh
 $ git clone git@github.com:arco-design/easy-email.git
 $ cd easy-email
-$ yarn  
+$ yarn
 $ yarn install-all
 $ yarn dev
 

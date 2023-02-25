@@ -29,7 +29,7 @@ export function Toolbar() {
     setModalVisible(true);
   };
 
-  const handleCopy: React.MouseEventHandler<HTMLDivElement> = (ev) => {
+  const handleCopy: React.MouseEventHandler<HTMLDivElement> = ev => {
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
     }
@@ -54,7 +54,7 @@ export function Toolbar() {
   return (
     <>
       <div
-        id='easy-email-extensions-InteractivePrompt-Toolbar'
+        id='easy-pdf-extensions-InteractivePrompt-Toolbar'
         style={{
           height: 0,
 
@@ -89,10 +89,10 @@ export function Toolbar() {
             {focusBlock && getBlockTitle(focusBlock, false)}
           </div>
           <div
-            onClick={(e) => {
+            onClick={e => {
               e.stopPropagation();
             }}
-            onMouseDown={(ev) => {
+            onMouseDown={ev => {
               ev.preventDefault();
             }}
             style={{
@@ -107,14 +107,20 @@ export function Toolbar() {
               iconName='icon-back-parent'
               onClick={handleSelectParent}
             />
-            <ToolItem iconName='icon-copy' onClick={handleCopy} />
+            <ToolItem
+              iconName='icon-copy'
+              onClick={handleCopy}
+            />
             {props.onAddCollection && (
               <ToolItem
                 iconName='icon-collection'
                 onClick={handleAddToCollection}
               />
             )}
-            <ToolItem iconName='icon-delete' onClick={handleDelete} />
+            <ToolItem
+              iconName='icon-delete'
+              onClick={handleDelete}
+            />
           </div>
         </div>
       </div>
