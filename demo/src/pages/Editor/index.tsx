@@ -385,7 +385,7 @@ export default function Editor() {
         onChangeMergeTag={onChangeMergeTag}
         autoComplete
         enabledLogic
-        // enabledMergeTagsBadge
+        enabledMergeTagsBadge
         dashed={false}
         mergeTags={mergeTags}
         mergeTagGenerate={tag => `{{${tag}}}`}
