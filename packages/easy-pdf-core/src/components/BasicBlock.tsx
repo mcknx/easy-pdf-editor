@@ -31,17 +31,13 @@ export function BasicBlock(props: {
   if (mode === 'testing' && tag === 'mj-image') {
     let url = data.attributes.src;
 
-    if (
-      url === '' ||
-      /{{([\s\S]+?)}}/g.test(url) ||
-      /\*\|([^\|\*]+)\|\*/g.test(url)
-    ) {
+    if (url === '' || /{{([\s\S]+?)}}/g.test(url) || /\*\|([^\|\*]+)\|\*/g.test(url)) {
       const adapterData = omit(params, 'data.attributes.src');
 
       return (
         <>
           {`<${tag} ${getAdapterAttributesString(adapterData)} src="${getImg(
-            'IMAGE_59'
+            'IMAGE_59',
           )}">`}
 
           {`</${tag}>`}
@@ -49,6 +45,10 @@ export function BasicBlock(props: {
       );
     }
   }
+
+  console.log(
+    `<${tag} ${getAdapterAttributesString(params)} mode="fixed-height" height="469px">`,
+  );
 
   return (
     <>

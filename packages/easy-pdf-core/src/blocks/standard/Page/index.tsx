@@ -2,7 +2,7 @@ import React from 'react';
 import { IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
-import { Wrapper } from '../Wrapper';
+import { Hero } from '../Hero';
 import { merge } from 'lodash';
 
 import { generaMjmlMetaData } from '@core/utils/generaMjmlMetaData';
@@ -40,7 +40,7 @@ export type IPage = IBlockData<
 
 export const Page = createBlock<IPage>({
   get name() {
-    return t('Page');
+    return t('Root');
   },
   type: BasicType.PAGE,
   create: payload => {
@@ -48,7 +48,7 @@ export const Page = createBlock<IPage>({
       type: BasicType.PAGE,
       data: {
         value: {
-          breakpoint: '480px',
+          breakpoint: '1056px',
           headAttributes: '',
           'font-size': '14px',
           'font-weight': '400',
@@ -57,15 +57,15 @@ export const Page = createBlock<IPage>({
           fonts: [],
           responsive: true,
           'font-family':
-            '-apple-system, BlinkMacSystemFont, \'Segoe UI\', \'Roboto\', \'Oxygen\', \'Ubuntu\', \'Cantarell\', \'Fira Sans\', \'Droid Sans\',\'Helvetica Neue\', sans-serif',
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', sans-serif",
           'text-color': '#000000',
         },
       },
       attributes: {
         'background-color': '#efeeea',
-        width: '600px',
+        width: '816px',
       },
-      children: [Wrapper.create()],
+      children: [],
     };
     return merge(defaultData, payload);
   },
