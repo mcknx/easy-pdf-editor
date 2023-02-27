@@ -3,7 +3,8 @@ import { IBlockData } from '@core/typings';
 import { BasicType } from '@core/constants';
 import { createBlock } from '@core/utils/createBlock';
 import { getImg } from '@core/utils/getImg';
-import { mergeBlock } from '@core/utils/mergeBlock';
+// import { mergeBlock } from '@core/utils/mergeBlock';
+import { merge } from 'lodash';
 import { t } from '@core/utils';
 import { BasicBlock } from '@core/components/BasicBlock';
 import { Wrapper } from '../Wrapper';
@@ -47,7 +48,7 @@ export const Hero = createBlock<IHero>({
       },
       children: [Wrapper.create()],
     };
-    return mergeBlock(defaultData, payload);
+    return merge(defaultData, payload);
   },
   validParentType: [BasicType.PAGE],
   render(params) {

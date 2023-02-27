@@ -52,7 +52,7 @@ export const Section = createBlock<ISection>({
     };
     return merge(defaultData, payload);
   },
-  validParentType: [BasicType.PAGE, BasicType.WRAPPER],
+  validParentType: [BasicType.PAGE, BasicType.WRAPPER, BasicType.HERO],
   render(params) {
     return (
       <BasicBlock
