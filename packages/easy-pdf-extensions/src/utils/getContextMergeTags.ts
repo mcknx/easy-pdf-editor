@@ -15,7 +15,8 @@ export function getContextMergeTags(
     const parentBlock = BlockManager.getBlockByType(parentBlockData.type);
 
     //  if is custom block
-    if (parentBlock && parentBlock.render) {
+    // if (parentBlock && parentBlock.render()) {
+    if (parentBlock) {
       const dataSource = parentBlockData.data?.value?.dataSource;
       if (!dataSource) return combineMergeTags;
 

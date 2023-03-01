@@ -5,7 +5,7 @@
     "paths": {
       "@extensions": ["./src"],
       "@extensions/*": ["./src/*"],
-      "easy-email-core": ["../easy-email-core"],
+      "easy-pdf-core": ["../easy-pdf-core"],
       "easy-pdf-editor": ["../easy-pdf-editor"]
     }
   }

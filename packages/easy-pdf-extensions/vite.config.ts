@@ -27,7 +27,7 @@ export default defineConfig({
     target: 'es2015',
     lib: {
       entry: path.resolve(__dirname, 'src/index.tsx'),
-      name: 'easy-email-extension',
+      name: 'easy-pdf-extension',
       formats: ['es'],
       fileName: () => 'index.js',
     },

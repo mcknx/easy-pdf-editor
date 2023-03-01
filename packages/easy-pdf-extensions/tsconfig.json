@@ -21,13 +21,13 @@
     "baseUrl": ".",
     "outDir": "lib",
     "paths": {
-      "@core": ["../easy-email-core/src"],
-      "@core/*": ["../easy-email-core/src/*"],
+      "@core": ["../easy-pdf-core/src"],
+      "@core/*": ["../easy-pdf-core/src/*"],
       "@": ["../easy-pdf-editor/src"],
       "@/*": ["../easy-pdf-editor/src/*"],
       "@extensions": ["./src"],
       "@extensions/*": ["./src/*"],
-      "easy-email-core": ["../easy-email-core/src/index.tsx"],
+      "easy-pdf-core": ["../easy-pdf-core/src/index.tsx"],
       "easy-pdf-editor": ["../easy-pdf-editor/src/index.tsx"]
     }
   },
