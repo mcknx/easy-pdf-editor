@@ -16,6 +16,125 @@ export const testMergeTags = {
   date: {
     today: 'Wed Feb 22 2023',
   },
+  specificExclusions: [
+    {
+      id: 1,
+      key: 'Drawings',
+      value: 'Drawings other than detailed above.',
+    },
+    {
+      id: 2,
+      key: 'Consent Authority',
+      value:
+        'Consent authority including any building, development or construction certificate application(s).',
+    },
+    {
+      id: 3,
+      key: 'Construction',
+      value:
+        'Construction of the steel building and any foundations (building is supplied as a kit).',
+    },
+    {
+      id: 4,
+      key: 'Insurance',
+      value:
+        'Insurance of the steel building once delivered to site or collected from depot.',
+    },
+  ],
+  specificInclusions: [
+    {
+      id: 1,
+      value:
+        'Determination of the design criteria by the engineer. This includes assessment in 8 cardinal directions to determine the site design wind speed based on the building orientation.',
+    },
+    {
+      id: 2,
+      value:
+        'A comprehensive step by step Construction Kit. This kit is specific to your building and gives step by step, simple to follow instructions on how to build your building.',
+    },
+    {
+      id: 3,
+      value:
+        'Engineering certification of the steel steel kit carport to the appropriate Australian Standards.',
+    },
+    {
+      id: 4,
+      value: 'Slab or Pier designs for soil classes A, S and M.',
+    },
+    {
+      id: 5,
+      value:
+        'Materials as nominated above supplied as per the attached "General Specification".',
+    },
+    {
+      id: 6,
+      value: 'BlueScope - product warranties of up to 15 years apply.',
+    },
+  ],
+  kitDetails: [
+    {
+      id: 1,
+      name: 'Weight',
+      value: 'Approximately: 1,100 kg',
+    },
+    {
+      id: 2,
+      name: 'Span',
+      value: '6 metres',
+    },
+    {
+      id: 3,
+      name: 'Length',
+      value: '9 metres (3 Bays of 3 metres each)',
+    },
+    {
+      id: 4,
+      name: 'Height',
+      value: '3 metres',
+    },
+    {
+      id: 5,
+      name: 'Roof Type',
+      value: 'Carport Gable, 10 degree pitch',
+    },
+    {
+      id: 6,
+      name: 'Roof',
+      value: 'ZINCALUME® steel TRIMCLAD® 0.42 BMT (0.47TCT) sheeting, BlueScope',
+    },
+    {
+      id: 7,
+      name: 'Walls & Trims',
+      value: 'ZINCALUME® steel TRIMCLAD® 0.42 BMT (0.47TCT) sheeting, BlueScope',
+    },
+    {
+      id: 8,
+      name: 'Gutters',
+      value: '150 Big front Quad Gutter - Unslotted. Nominal downpipe spacing = 3m.',
+    },
+    {
+      id: 9,
+      name: 'Open Bays',
+      value:
+        'Two (2) 3m open bays and Four (4) 6m open bays with the column removed - along the sides of the steel building. Refer to Layout (attached) for location & height clearances.',
+    },
+    {
+      id: 10,
+      name: 'Open Gable-Ends',
+      value: 'Both ends are open with infill sheeting',
+    },
+    {
+      id: 11,
+      name: 'Roof Purlins & Wall Girts',
+      value:
+        'Z sections bolted to rafters & columns with a minimum overlap of 10% of the bay width.',
+    },
+    {
+      id: 12,
+      name: 'Fixing to Concrete',
+      value: 'Tru-Bolts fitted after concrete is cured.',
+    },
+  ],
   emptyList: [],
   product_list: [
     {
